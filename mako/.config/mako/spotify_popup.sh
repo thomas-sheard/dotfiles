@@ -1,6 +1,7 @@
 #!/bin/bash
 
-# currently thinking i load ALL song information, and update art, Oon the song change event, and then load the info on request..? this seems to be what spotify does!!!!!!!!
+# currently thinking i load ALL song information, and update art, on the song change event, and then load the info on request..? 
+# this seems to be what spotify does
 
 EXISTS_FILE=/tmp/spotifypopup
 
