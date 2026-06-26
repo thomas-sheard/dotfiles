@@ -1,0 +1,113 @@
+* {
+  font-family: 'Iosevka Variant', 'Symbols Nerd Font Mono'/*, 'Icons'*/;
+  font-weight: 600;
+  font-size: 16px;
+  /*font-stretch: normal;*/
+  padding: 0;
+  margin: 0;
+  border: none;
+  min-height: 0;
+}
+
+window#waybar {
+  background-color: #282c34;
+}
+
+#workspaces {
+  margin-left: 3px;
+}
+
+#workspaces button {
+  color: #e5c07b;
+  padding: 2px 4px 0px 4px;
+  margin: 0;
+  border: none;
+  min-height: 0;
+  min-width: 0;
+}
+
+#workspaces button.persistent {
+  color: #e5c07b;
+}
+
+#workspaces button.active {
+  color: #e5c07b;
+}
+
+#workspaces button:hover {
+  background: none;
+  border: none;
+  transition: none;
+  box-shadow: none;
+  text-shadow: none;
+}
+
+#clock {
+  color: #abb2bf;
+}
+
+#custom-spotify {
+  padding-right: 15px;
+  color: #e06c75; /* spotify green is: #1db954, onedark red is #e06c75 */
+}
+
+/*
+#custom-arrow3 {
+  font-size: 13pt;
+  color: #56b6c2;
+}
+*/
+
+#memory {
+  /*
+  font-family: "Icons";
+  font-size: 13pt;
+  */
+  color: #56b6c2;
+  padding: 0;
+  margin-top: -1px;
+  margin-bottom: -1px;
+  margin-left: 10px;
+}
+
+/*
+#custom-arrow2 {
+  font-size: 13pt;
+  color: #c678dd; 
+  background: #56b6c2;
+}
+*/
+
+#cpu {
+  /*
+  font-family: "Icons";
+  font-size: 13pt;
+  */
+  margin-left: 10px;
+  color: #c678dd;
+  padding: 0;
+  margin-top: -1px;
+  margin-bottom: -1px;
+}
+
+/*
+#custom-arrow1 {
+  font-size: 13pt;
+  color: #98c379;
+  background: #c678dd;
+}
+*/
+
+#battery {
+  /*
+  font-family: "Icons";
+  font-size: 13pt;
+  */
+  color: #98c379;
+  margin-left: 10px;
+  margin-right: 4px;
+  padding: 0;
+  margin-top: -1px;
+  margin-bottom: -1px;
+}
+
