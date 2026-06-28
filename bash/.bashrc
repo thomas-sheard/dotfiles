@@ -29,13 +29,13 @@ deploy() {
   done
 }
 
-pushdot() {
-  
-}
-
-pulldot() {
-
-}
+#pushdot() {
+#  
+#}
+#
+#pulldot() {
+#
+#}
 
 # R functions
 
