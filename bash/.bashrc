@@ -22,11 +22,32 @@ alias btui='bluetuith'
 
 # generic functions
 
-deploy() {
-  while true; do
-    echo "REIMPLEMENT THIS: DO NOT DELETE THE REMOTE FROM ROOT!"
-    sleep 0.1
-  done
+hugonew() {
+    local root_dir
+    local current_dir
+    local relative_path
+
+    root_dir=$(git rev-parse --show-toplevel 2>/dev/null)
+    
+    if [ -z "$root_dir" ] || { [ ! -f "$root_dir/hugo.toml" ] && [ ! -f "$root_dir/config.toml" ]; }; then
+        echo "Error: Hugo project root (with config file) not found via Git."
+        return 1
+    fi
+
+    current_dir=$(pwd)
+
+    if [[ "$current_dir" != *"/content"* ]]; then
+        echo "Error: You must be inside the 'content' directory to use this shortcut."
+        return 1
+    fi
+
+    relative_path="${current_dir##*/content/}"
+
+    if [ "$current_dir" = "$root_dir/content" ]; then
+        hugo new --source "$root_dir" "content/$1"
+    else
+        hugo new --source "$root_dir" "content/$relative_path/$1"
+    fi
 }
 
 #pushdot() {
