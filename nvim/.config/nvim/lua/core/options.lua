@@ -64,7 +64,7 @@ vim.opt.spell = false -- no spellcheck by default (use ':set spell' and ':set no
 -- aesthetics 
 
 vim.opt.guicursor = "r-c-v-sm:block,i-ci-ve:ver25,n-cr-o:hor10"
-vim.opt.conceallevel = 2 -- level of syntax replacement, for example math symbol macros being replaced with the actual symbol unicode in a .tex file
+vim.opt.conceallevel = 0 -- level of syntax replacement, for example math symbol macros being replaced with the actual symbol unicode in a .tex file
 
 -- disable autocomments on newline
 
