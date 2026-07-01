@@ -10,7 +10,7 @@ padding-top = 35%
 result-spacing = 25
 num-results = 5
 
-font = /home/thomas/.local/share/fonts/Iosevka/dist/IosevkaVariant_2/TTF/IosevkaVariant_2-Regular.ttf
+font = /home/thomas/.local/share/fonts/Iosevka/dist/IosevkaVariant2/WOFF2/IosevkaVariant2-Regular.woff2
 font-features = "smlp, c2lp"
 
 text-color = #ABB2BF
