@@ -9,7 +9,7 @@ autopairs.setup({
 })
 
 autopairs.add_rules({
-  rule("$", "$", {"tex", "latex"})
+  rule("$", "$", {"tex", "latex", "md", "markdown"})
   :with_move(function(opts)
          return opts.next_char == opts.char
       end),

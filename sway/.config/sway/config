@@ -61,7 +61,6 @@ output eDP-1 {
 
 output HDMI-A-1 {
   resolution 1920x1080@120Hz position -320,-1440
-  scale 0.75
 }
 
 for_window [shell="xwayland"] title_format "[XWayland] %title"
