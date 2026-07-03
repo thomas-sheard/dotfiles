@@ -1,0 +1,8 @@
+sway
+waybar
+mako
+foot
+neovim
+tree-sitter-cli
+
+swaycwd
