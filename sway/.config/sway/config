@@ -8,7 +8,7 @@ exec mako
 # or
 # include ./profiles/desktop
 # (gitignored)
-include ./profile
+include ./set_profile
 
 exec_always xrandr --output XWAYLAND0 --primary
 
