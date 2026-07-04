@@ -9,3 +9,7 @@ These are then symlinked to their respective locations using [GNU stow](https://
 
 The repo tracks everything, so pulling between machines includes redundant config files.
 Machine-specific confs 
+
+
+SDDM configuration should not be added to `configure.sh`, as login managers act before user login.
+You must manually stow it with root privileges. Run `# stow -d ~/dotfiles -t / sddm` to apply SDDM styling.
