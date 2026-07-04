@@ -1,11 +1,7 @@
-## things i want for sway:
-# tabbed / stacked borders to be complete on the top edge
-# persistent direction indicator even after a split
-
 # startup
+
 exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
 exec mako
-exec /home/thomas/bin/bash/gammastep_toggle.sh -t 4500
 
 # you must have a ./profile file which has either
 # include ./profiles/laptop
@@ -16,7 +12,7 @@ include ./profile
 
 exec_always xrandr --output XWAYLAND0 --primary
 
-#super key
+# super key
 set $mod Mod4
 
 # terminal 
@@ -37,11 +33,6 @@ set $right l
 
 font pango:IosevkaVariant 10
 output * bg /home/thomas/.config/wallpapers/sage_wallpaper.jpg fill
-
-output eDP-1 {
-  resolution 1920x1080 position 0,0
-}
-
 
 # borders
 
@@ -71,17 +62,6 @@ for_window [shell="xwayland"] title_format "[XWayland] %title"
 
 #for_window [class="steam"] input type:touchpad dwt disabled
 
-input type:touchpad {
-  accel_profile flat
-    pointer_accel 0.5
-    scroll_factor 0.2
-
-    dwt disabled
-    tap enabled
-    drag disabled
-    natural_scroll enabled
-}
-
 input type:keyboard {
   xkb_options ctrl:nocaps,altwin:swap_alt_win
   repeat_delay 300
@@ -104,10 +84,6 @@ floating_modifier $mod normal
 
 # reload the configuration file
 bindsym $mod+r reload
-
-# she close on my lid till i switch
-bindswitch --locked lid:on output eDP-1 disable
-bindswitch --locked lid:off output eDP-1 enable
 
 # exit sway (logs you out of your Wayland session)
 bindsym $mod+Shift+e exec swaynag -t warning -m 'Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
@@ -196,27 +172,6 @@ bindsym $mod+Shift+$right resize shrink width 10px
 bindsym $mod+Shift+$down resize grow height 10px
 bindsym $mod+Shift+$up resize shrink height 10px
 
-# F1-F4
-
-bindsym --locked XF86AudioMute exec pactl set-sink-mute \@DEFAULT_SINK@ toggle
-bindsym --locked XF86AudioLowerVolume exec pactl set-sink-volume \@DEFAULT_SINK@ -5%
-bindsym --locked XF86AudioRaiseVolume exec pactl set-sink-volume \@DEFAULT_SINK@ +5%
-bindsym --locked XF86AudioMicMute exec pactl set-source-mute \@DEFAULT_SOURCE@ toggle
-
-# F5-F8
-
-bindsym --locked XF86MonBrightnessDown exec brightnessctl set 5%-
-bindsym --locked XF86MonBrightnessUp exec brightnessctl set 5%+
-bindsym --locked XF86Display exec /home/thomas/bin/bash/gammastep_toggle.sh -t 4500
-#bindsym --locked XF86WLAN exec # swaylock?
-
-# F9-F12
-
-#bindsym --locked XF86Messenger exec /home/thomas/bin/bash/player_popup.sh
-bindsym --locked XF86PickupPhone exec playerctl --player=playerctld previous
-bindsym --locked XF86HangupPhone exec playerctl --player=playerctld next
-bindsym --locked XF86Favorites exec playerctl --player=playerctld play-pause
-
 # screenshot + screenshot to clipboard
 # FIXME: currently saves to ~ instead of ~/Pictures, which is annoying
 
@@ -228,10 +183,5 @@ for_window [app_id="zenity"] floating enable
 bindsym $mod+Print exec bash -c 'TEMP_FILE=$(mktemp /tmp/screenshot_XXXXXX.png); grim -g "$(slurp)" "$TEMP_FILE" && TARGET=$(zenity --file-selection --save --confirm-overwrite --filename="$HOME/screenshot_$(date +%Y%m%d_%H%M%S).png"); if [ ! -z "$TARGET" ]; then mv "$TEMP_FILE" "$TARGET"; else rm "$TEMP_FILE"; fi'
 
 #bindsym $mod+Print exec bash -c 'TARGET=$(zenity --file-selection --save --confirm-overwrite --filename="$HOME/screenshot_$(date +%Y%m%d_%H%M%S).png"); [ ! -z "$TARGET" ] && grim -g "$(slurp)" "$TARGET"'
-
-# gestures
-
-bindgesture swipe:right workspace prev
-bindgesture swipe:left workspace next
 
 include /etc/sway/config.d/*
