@@ -3,6 +3,12 @@ exec_always notify-send DESKTOP
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id gnome-keyring-daemon --start --components=secrets
 
+font pango:IosevkaVariant2 8
+
+output DP-3 {
+  resolution 1920x1080 position 0,0
+}
+
 input type:pointer {
   accel_profile flat
   pointer_accel -0.4

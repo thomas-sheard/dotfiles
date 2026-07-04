@@ -31,7 +31,6 @@ set $right l
 
 # general
 
-font pango:IosevkaVariant 10
 output * bg /home/thomas/.config/wallpapers/sage_wallpaper.jpg fill
 
 # borders

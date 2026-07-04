@@ -2,6 +2,10 @@ exec_always notify-send "Using laptop configuration" "Change in .config/sway/pro
 
 exec /home/thomas/bin/bash/gammastep_toggle.sh -t 4500
 
+
+# i have NO idea why my laptop fails to source IosevkaVariant2
+font pango:IosevkaVariant 10
+
 output eDP-1 {
   resolution 1920x1080 position 0,0
 }
