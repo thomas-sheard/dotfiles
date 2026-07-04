@@ -7,10 +7,10 @@ outline-width = 0
 padding-left = 35%
 padding-top = 35%
 
-result-spacing = 25
 num-results = 5
 
 font = /home/thomas/.local/share/fonts/Iosevka/dist/IosevkaVariant2/WOFF2/IosevkaVariant2-Regular.woff2
+include = font.conf
 font-features = "smlp, c2lp"
 
 text-color = #ABB2BF
