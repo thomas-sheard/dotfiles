@@ -1,5 +1,5 @@
 #sway/
 include.txt
 sway/.config/sway/profile
-./foot/.config/foot/font.conf
-./waybar/.config/waybar/font.css
+foot/.config/foot/font.conf
+waybar/.config/waybar/font.css
