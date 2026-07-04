@@ -1,4 +1,4 @@
-exec_always notify-send "Using laptop configuration" "Change in .config/sway/profile"
+exec_always notify-send "Using laptop configuration" "Change in .config/sway/set_profile"
 
 exec /home/thomas/bin/bash/gammastep_toggle.sh -t 4500
 

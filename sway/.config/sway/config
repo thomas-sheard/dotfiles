@@ -124,9 +124,7 @@ bindsym $mod+Minus focus child
 
 # swapping workspaces
 
-bindsym $mod+Tab workspace back_and_forth
 
-bindsym $mod+backslash workspace 0
 bindsym $mod+1 workspace 1
 bindsym $mod+2 workspace 2
 bindsym $mod+3 workspace 3
@@ -141,9 +139,8 @@ bindsym $mod+0 workspace 10
 bindsym $mod+bracketright workspace next
 bindsym $mod+bracketleft workspace prev
 
-# moving windows
 
-bindsym $mod+Control+Tab move container to workspace back_and_forth
+# moving windows
 
 bindsym $mod+Control+1 floating disable, move container to workspace 1
 bindsym $mod+Control+2 floating disable, move container to workspace 2
@@ -159,11 +156,20 @@ bindsym $mod+Control+0 floating disable, move container to workspace 10
 bindsym $mod+Control+bracketright move container to workspace next
 bindsym $mod+Control+bracketleft move container to workspace prev
 
-# scratchpad
+# special workspaces
 
-bindsym $mod+grave scratchpad show
-bindsym $mod+Control+grave floating enable, resize set width 1400 height 900, move scratchpad
-#bindsym $mod+Control+grave move container to scratchpad
+# swaps to 0 if not on zero, swaps to previous workspace if on 0
+# my solution for special workspaces
+bindsym $mod+Tab exec ~/.config/sway/toggle_special.sh
+bindsym $mod+Control+Tab floating disable, move container to workspace 0
+
+for_window [class="Spotify"] move container to workspace 0
+
+# i've found it's useful to have at least one named (not numbered) 'void' workspace that can just have crap sent to it
+# it gives you another, non-hierarchichal way to index workspaces
+# e.g. on desktop i automatically send games to this pocket dimension and then they don't interfere with anything
+bindsym $mod+backslash workspace "isolated"
+bindsym $mod+Control+backslash floating disable, move container to workspace "isolated"
 
 # resizing
 

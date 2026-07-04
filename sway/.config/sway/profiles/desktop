@@ -1,8 +1,12 @@
-exec_always notify-send DESKTOP
+exec_always notify-send "Using desktop configuration" "Change in .config/sway/set_profile"
+
+# execs
 
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id gnome-keyring-daemon --start --components=secrets
 exec nm-applet
+
+# general
 
 font pango:IosevkaVariant2 8
 
@@ -16,6 +20,23 @@ input type:pointer {
   scroll_factor 0.8
 }
 
-assign [class="^steam_app_"] "0"
-assign [instance="^wine_"] "0"
+# window rules
 
+for_window [app_id="vesktop"] move container to workspace 0
+
+# games get sent to an isolated workspace that doesn't interfere with anything
+assign [class="^steam_app_"] "isolated"
+assign [instance="^wine_"] "isolated"
+
+# keybinds (currently for the zoom)
+# almost definitely worth using VIA to make this consistent for when the Magi arrives
+
+bindsym --locked XF86AudioLowerVolume exec pactl set-sink-volume \@DEFAULT_SINK@ -5%
+bindsym --locked XF86AudioRaiseVolume exec pactl set-sink-volume \@DEFAULT_SINK@ +5%
+
+bindsym --locked XF86AudioPrev exec playerctl --player=playerctld previous
+bindsym --locked XF86AudioNext exec playerctl --player=playerctld next
+
+bindsym --locked XF86AudioPlay exec playerctl --player=playerctld play-pause
+
+# bindysm nosym????? help!!!
