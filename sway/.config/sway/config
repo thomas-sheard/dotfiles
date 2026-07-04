@@ -7,6 +7,11 @@ exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DE
 exec mako
 exec /home/thomas/bin/bash/gammastep_toggle.sh -t 4500
 
+# you must have a ./profile file which has either
+# include ./profiles/laptop
+# or
+# include ./profiles/desktop
+# (gitignored)
 include ./profile
 
 exec_always xrandr --output XWAYLAND0 --primary

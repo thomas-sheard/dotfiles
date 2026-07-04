@@ -14,10 +14,10 @@ text-color=#abb2bf
 font=IosevkaVariant2 10
 
 [urgency=low]
-border-color=#98c379
+border-color=#e5c07b
 
 [urgency=normal]
-border-color=#e5c07b
+border-color=#98c379
 
 [urgency=high]
 border-color=#e06c75

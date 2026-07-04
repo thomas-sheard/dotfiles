@@ -71,6 +71,17 @@ vim.opt.conceallevel = 0 -- level of syntax replacement, for example math symbol
 vim.cmd('autocmd BufEnter * set formatoptions-=cro')
 vim.cmd('autocmd BufEnter * setlocal formatoptions-=cro')
 
+-- syntax highlighting for nested sway config files
+
+vim.filetype.add({
+  extension = {
+    sway = 'swayconfig',
+  },
+  pattern = {
+    ['~/dotfiles/sway/.config/sway/.*'] = 'swayconfig', 
+  },
+})
+
 -- todo comments (?)
 --vim.fn.matchadd("DiagnosticInfo", "\\(TODO:\\)")
 --vim.fn.matchadd("DiagnosticWarn", "\\(HACK:\\)")

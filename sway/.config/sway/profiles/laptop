@@ -1,1 +1,3 @@
-exec_always notify-send LAPTOP
+exec_always notify-send "Using laptop configuration" "Change in .config/sway/profile"
+
+
