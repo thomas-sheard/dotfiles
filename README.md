@@ -1,4 +1,4 @@
-This repo tracks my config files across both my laptop (running Arch + Sway) and desktop (running CachyOS + Plasma).
+This repo tracks my config files across both my laptop (running Arch + Sway) and desktop (running CachyOS + Sway).
 
 Each directory in `~/dotfiles/` contains the entire path from `$HOME` to the relevant configuration files.
 
@@ -7,6 +7,5 @@ These are then symlinked to their respective locations using [GNU stow](https://
 
 ## Usage
 
-The repo tracks everything, so pulling between machines includes redundant config files (e.g. pulling on my Plasma desktop includes Sway configuration).
-This is not significant, and is cosmetically dealt with by only `stow`ing (creating symlinks) from `dotfiles/` to the desired configurations. 
-We simply don't create a symlink to the Sway configs on a non-Sway system.
+The repo tracks everything, so pulling between machines includes redundant config files.
+Machine-specific confs 
