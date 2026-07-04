@@ -1,13 +1,21 @@
 * {
   font-family: 'Iosevka Variant 2', 'Symbols Nerd Font Mono'/*, 'Icons'*/;
   font-weight: 600;
-  font-size: 16px;
   /*font-stretch: normal;*/
   padding: 0;
   margin: 0;
   border: none;
   min-height: 0;
 }
+
+@import "font.css";
+/* font.css should be in ./ and contain:
+
+* {
+  font-size: <machine_font_size>;
+}
+
+*/
 
 window#waybar {
   background-color: #282c34;
