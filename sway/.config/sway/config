@@ -4,8 +4,10 @@
 
 # startup
 exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
-exec /home/thomas/bin/bash/gammastep_toggle.sh -t 4500
 exec mako
+exec /home/thomas/bin/bash/gammastep_toggle.sh -t 4500
+
+include ./profile
 
 exec_always xrandr --output XWAYLAND0 --primary
 
@@ -31,6 +33,11 @@ set $right l
 font pango:IosevkaVariant 10
 output * bg /home/thomas/.config/wallpapers/sage_wallpaper.jpg fill
 
+output eDP-1 {
+  resolution 1920x1080 position 0,0
+}
+
+
 # borders
 
 default_border pixel 1
@@ -54,14 +61,6 @@ bar {
 # devices
 
 focus_follows_mouse always
-
-output eDP-1 {
-  resolution 1920x1080 position 0,0
-}
-
-output HDMI-A-1 {
-  resolution 1920x1080@120Hz position -320,-1440
-}
 
 for_window [shell="xwayland"] title_format "[XWayland] %title"
 
