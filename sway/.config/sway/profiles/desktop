@@ -1,1 +1,9 @@
 exec_always notify-send DESKTOP
+
+exec --no-startup-id gnome-keyring-daemon --start --components=secrets
+
+input type:pointer {
+  accel_profile flat
+  pointer_accel -0.4
+  scroll_factor 0.8
+}
