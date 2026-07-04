@@ -1,4 +1,4 @@
 include.txt
-sway/.config/sway/profile
+sway/.config/sway/set_profile
 foot/.config/foot/font.conf
 waybar/.config/waybar/font.css
