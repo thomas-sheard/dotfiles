@@ -1,5 +1,6 @@
 include.txt
 sway/.config/sway/set_profile
 foot/.config/foot/font.conf
+tofi/.config/tofi/font.conf
 waybar/.config/waybar/font.css
 *.uuid
