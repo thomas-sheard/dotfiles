@@ -15,3 +15,7 @@ input type:pointer {
   pointer_accel -0.4
   scroll_factor 0.8
 }
+
+assign [class="^steam_app_"] "0"
+assign [instance="^wine_"] "0"
+
