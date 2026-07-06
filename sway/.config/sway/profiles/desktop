@@ -39,4 +39,4 @@ bindsym --locked XF86AudioNext exec playerctl --player=playerctld next
 
 bindsym --locked XF86AudioPlay exec playerctl --player=playerctld play-pause
 
-# bindysm nosym????? help!!!
+# bindsysm nosym????? help!!!

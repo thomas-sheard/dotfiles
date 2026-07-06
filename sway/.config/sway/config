@@ -139,7 +139,6 @@ bindsym $mod+0 workspace 10
 bindsym $mod+bracketright workspace next
 bindsym $mod+bracketleft workspace prev
 
-
 # moving windows
 
 bindsym $mod+Control+1 floating disable, move container to workspace 1
