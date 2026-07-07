@@ -10,6 +10,11 @@ output eDP-1 {
   resolution 1920x1080 position 0,0
 }
 
+
+input type:keyboard {
+  xkb_options ctrl:nocaps,altwin:swap_alt_win
+}
+
 input type:touchpad {
   accel_profile flat
     pointer_accel 0.5

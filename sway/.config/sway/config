@@ -1,4 +1,4 @@
-# startup
+#startup
 
 exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
 exec mako
@@ -61,13 +61,13 @@ for_window [shell="xwayland"] title_format "[XWayland] %title"
 
 #for_window [class="steam"] input type:touchpad dwt disabled
 
+# key bindings
+
+
 input type:keyboard {
-  xkb_options ctrl:nocaps,altwin:swap_alt_win
   repeat_delay 300
   repeat_rate 30 
 }
-
-# key bindings
 
 # new terminal
 bindsym $mod+Return exec $term
@@ -159,7 +159,7 @@ bindsym $mod+Control+bracketleft move container to workspace prev
 
 # swaps to 0 if not on zero, swaps to previous workspace if on 0
 # my solution for special workspaces
-bindsym $mod+Tab exec ~/.config/sway/toggle_special.sh
+bindsym $mod+Tab exec ~/.config/sway/scripts/toggle_special.sh
 bindsym $mod+Control+Tab floating disable, move container to workspace 0
 
 for_window [class="Spotify"] move container to workspace 0

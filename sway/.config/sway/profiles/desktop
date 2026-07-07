@@ -14,6 +14,12 @@ output DP-3 {
   resolution 1920x1080 position 0,0
 }
 
+
+# something strange with the way these keysyms are set across keyboards. but this keeps the actionset consistent, even when the semantic keys are symbolically different. a bit strange but it works.
+input type:keyboard {
+  xkb_options ctrl:nocaps
+}
+
 input type:pointer {
   accel_profile flat
   pointer_accel -0.4
@@ -28,9 +34,22 @@ for_window [app_id="vesktop"] move container to workspace 0
 assign [class="^steam_app_"] "isolated"
 assign [instance="^wine_"] "isolated"
 
-# keybinds (currently for the zoom)
-# almost definitely worth using VIA to make this consistent for when the Magi arrives
+# keybinds (currently for the iqunix)
+# via doesn't actually change the keysym sent to the machine. which is.. annoying. but we can sort of catchall binds for multiple boards by assuming any overlap in keysyms will be sensible, and that more proprietary layouts won't overlap at all
 
+# these do nothing on the external monitor lol
+bindsym --locked XF86MonBrightnessDown exec brightnessctl 5%-
+bindsym --locked XF86MonBrightnessup exec brightnessctl 5%-
+
+# ???? this is for F3 and F4 modifier function. a bit strange but. not sure how to fix. don't need them for now though
+#bindsym --locked Up
+#bindsym --locked XF86Search playerctl --playerctld play-pause
+
+
+bindsym --locked XF86VoiceCommand exec ~/.config/sway/scripts/mute_toggle.sh
+#bindysm --locked XF86DoNotDisturb exec
+
+bindsym --locked XF86AudioMute exec pactl set-sink-mute \@DEFAULT_SINK@ toggle
 bindsym --locked XF86AudioLowerVolume exec pactl set-sink-volume \@DEFAULT_SINK@ -5%
 bindsym --locked XF86AudioRaiseVolume exec pactl set-sink-volume \@DEFAULT_SINK@ +5%
 
