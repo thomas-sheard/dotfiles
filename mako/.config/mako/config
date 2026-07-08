@@ -8,20 +8,17 @@ border-color=#61afef
 border-radius=5
 icons=1
 max-icon-size=32
-default-timeout=10000
-ignore-timeout=1
 text-color=#abb2bf
 font=IosevkaVariant2 10
 
 [urgency=low]
-border-color=#e5c07b
+border-color=#98c379
 
 [urgency=normal]
-border-color=#98c379
+border-color=#e5c07b
 
 [urgency=high]
 border-color=#e06c75
-default-timeout=0
 
 [category=spotify]
 border-color=#1ed760
@@ -31,12 +28,3 @@ on-touch=none
 on-button-left=none
 on-button-right=none
 
-[category=fullscreen]
-border-color=#e06c75
-anchor=bottom-right
-width=100
-default-timeout=0
-
-on-touch=none
-on-button-left=none
-on-button-right=none
