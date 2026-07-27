@@ -10,7 +10,7 @@ vim.opt.updatetime = 250 -- time (ms) without an edit for a swap file to be writ
 
 -- navigation
 
-vim.opt.mouse = '' -- disable mouse (learn thy motions)
+vim.opt.mouse = 'nv' -- disable mouse (learn thy motions)
 vim.opt.scrolloff = 8 -- forces 8 row buffer between cursor and screen bounds
 vim.opt.mousescroll = 'ver:10' -- increase scroll event sensitivity
 
