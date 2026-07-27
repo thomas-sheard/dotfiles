@@ -2,6 +2,7 @@
 
 exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
 exec mako
+exec syncthing
 
 # you must have a ./profile file which has either
 # include ./profiles/laptop
