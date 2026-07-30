@@ -163,6 +163,8 @@ bindsym $mod+Control+bracketleft move container to workspace prev
 bindsym $mod+Tab exec ~/.config/sway/scripts/toggle_special.sh
 bindsym $mod+Control+Tab floating disable, move container to workspace 0
 
+bindsym $mod+grave workspace back_and_forth
+
 for_window [class="Spotify"] move container to workspace 0
 
 # i've found it's useful to have at least one named (not numbered) 'void' workspace that can just have crap sent to it
