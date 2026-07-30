@@ -1,7 +1,5 @@
 #!/bin/bash
 
-export DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/1000/bus"
-
 # based heavily on https://www.youtube.com/watch?v=3wTt6fStYCI, adapted for thinkpad paths / tlp commands (tlp uses natacpi, not acpi, which does not have the same commands)
 
 # current charge

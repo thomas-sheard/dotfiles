@@ -14,6 +14,9 @@ autopairs.add_rules({
          return opts.next_char == opts.char
       end),
   rule("`", "'", {"tex", "latex"}),
+
+  rule("{", "}", {"md", "markdown"}),
+  rule("(", ")", {"md", "markdown"}),
 })
 
 -- enables autopairs after a function completion
