@@ -29,7 +29,7 @@ autopairs.add_rules({
   rule("`", "'", {"tex", "latex"}),
 
   rule("{", "}", {"md", "markdown"}),
-  rule("(", ")", {"md", "markdown"}),
+  rule("(", ")", {"tex", "latex", "md", "markdown"}),
 })
 
 -- enables autopairs after a function completion
