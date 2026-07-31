@@ -111,9 +111,10 @@ hxecompile() {
 }
 
 texplate() {
-  IFS='/' read -ra DIR <<< $(pwd)
-  pdir="${DIR[-1]}"
-  cp ~/Desktop/programming/latex/templates/assignment/assignment.tex $pdir.tex
+#  IFS='/' read -ra DIR <<< $(pwd)
+#  pdir="${DIR[-1]}"
+#  cp ~/Desktop/programming/latex/templates/assignment/assignment.tex $pdir.tex
+  cp ~/Desktop/programming/latex/templates/assignment/assignment.tex ./main.tex
 }
 
 # PATH

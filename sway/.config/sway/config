@@ -75,6 +75,7 @@ bindsym $mod+Return exec $term
 
 # toggle tofi (launcher)
 bindsym $mod+space exec pkill tofi-drun || tofi-drun | xargs swaymsg exec --
+bindsym $mod+Control+space exec pkill tofi-run || tofi-run | xargs swaymsg exec --
 
 # kill focused window
 bindsym $mod+q kill
