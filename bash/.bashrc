@@ -15,8 +15,8 @@ QT_QPA_PLATFORM=wayland
 
 # aliases
 
-# borked
-#alias devserver='cd /home/thomas/Desktop/programming/html/website/contents/ && firefox localhost:8000 && python -m http.server'
+# localhost 1313
+alias devserver='cd /home/thomas/Desktop/programming/html/website/ && hugo server -D'
 
 alias btui='bluetuith'
 
