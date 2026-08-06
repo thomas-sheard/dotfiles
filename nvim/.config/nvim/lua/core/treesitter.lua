@@ -5,7 +5,7 @@ ts.setup {
 }
 
 ts.install {
-  'c', 'cpp', 'cmake', 'lua', 'python', 'r', 'rust', 'vimdoc', 'vim', 'bash', 'java', 'latex', 'query', 'html', 'markdown', "rnoweb", "yaml"
+  'c', 'cpp', 'cmake', 'lua', 'python', 'r', 'rust', 'vimdoc', 'vim', 'bash', 'java', 'latex', 'query', 'html', 'markdown', "rnoweb", "yaml", "typst"
 }
 
 

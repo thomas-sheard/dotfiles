@@ -22,14 +22,19 @@ autopairs.setup({
 })
 
 autopairs.add_rules({
-  rule("$", "$", {"tex", "latex", "md", "markdown"})
+  rule("$", "$", {"tex", "latex", "md", "markdown", "typ", "typst"})
   :with_move(function(opts)
          return opts.next_char == opts.char
       end),
   rule("`", "'", {"tex", "latex"}),
 
+  rule("$ ", " $", {"typ", "typst"})
+  :with_move(function(opts)
+         return opts.next_char == opts.char
+      end),
+
   rule("{", "}", {"md", "markdown"}),
-  rule("(", ")", {"tex", "latex", "md", "markdown"}),
+  rule("(", ")", {"tex", "latex", "md", "markdown", "typ", "typst"}),
 })
 
 -- enables autopairs after a function completion
