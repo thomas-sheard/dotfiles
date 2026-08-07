@@ -22,6 +22,11 @@ alias btui='bluetuith'
 
 # generic functions
 
+mkcd() {
+  mkdir $1
+  cd "$_"
+}
+
 hugonew() {
     local root_dir
     local current_dir
@@ -64,6 +69,16 @@ reRun() {
   Rscript $1
   zathura Rplots.pdf
 }
+
+# typst functions
+
+tcompile() {
+  FILE=`find . -maxdepth 1 -name "*.typ"`
+  NAME=${FILE%.*}
+  typst compile "$NAME.typ"
+  zathur
+}
+
 
 # latex functions
 
