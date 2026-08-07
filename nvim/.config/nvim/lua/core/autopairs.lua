@@ -28,10 +28,8 @@ autopairs.add_rules({
       end),
   rule("`", "'", {"tex", "latex"}),
 
-  rule("$ ", " $", {"typ", "typst"})
-  :with_move(function(opts)
-         return opts.next_char == opts.char
-      end),
+  rule("$ ", " ", {"typ", "typst"}),
+  rule("$$", "$", {"md", "markdown"}),
 
   rule("{", "}", {"md", "markdown"}),
   rule("(", ")", {"tex", "latex", "md", "markdown", "typ", "typst"}),
