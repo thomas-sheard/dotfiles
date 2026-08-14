@@ -2,7 +2,7 @@ local ls = require('luasnip')
 
 ls.config.set_config({
   enable_autosnippets = true,
-  history = true, -- jumping into old snippets
+  history = false, -- jumping into old snippets
   region_check_events = "InsertEnter,CursorMoved", -- checks snippet 'areas'
   delete_check_events = "InsertLeave,TextChanged",
 })
