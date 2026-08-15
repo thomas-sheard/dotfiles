@@ -20,5 +20,6 @@ You must manually stow it with root privileges. Run `# stow -d ~/dotfiles -t / s
     - would be cool to have * and _ autopair but delete the second if a space is pressed instead
     - ie `"\*"` -> `\*|\*`, `"* "` -> `"\* |`
     - such that typing `*word*` works, and so does `"* "`
-
+    - similar for _
+    - similar again for lists: automatically place another list element at the same level of indentation, but erase it and return to beginning of line if enter is pressed again
 
