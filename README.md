@@ -13,3 +13,12 @@ Machine-specific confs
 
 SDDM configuration should not be added to `configure.sh`, as login managers act before user login.
 You must manually stow it with root privileges. Run `# stow -d ~/dotfiles -t / sddm` to apply SDDM styling.
+
+## To-do:
+
+- `typst` tabbing and syntax highlighting
+    - would be cool to have * and _ autopair but delete the second if a space is pressed instead
+    - ie `"\*"` -> `\*|\*`, `"* "` -> `"\* |`
+    - such that typing `*word*` works, and so does `"* "`
+
+
