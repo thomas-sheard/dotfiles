@@ -8,6 +8,10 @@ output eDP-1 {
   resolution 1920x1080 position 0,0
 }
 
+output HDMI-A-1 {
+  resolution 1920x1080 position 0,-1080
+}
+
 
 input type:keyboard {
   xkb_options ctrl:nocaps,altwin:swap_alt_win
