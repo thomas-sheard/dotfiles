@@ -29,6 +29,9 @@ autopairs.add_rules({
 --      end),
   rule("`", "'", {"tex", "latex"}),
 
+  rule("*", "*", {"typst", "typ"}),
+  rule("_", "_", {"typst", "typ"}),
+
   rule("$$", "$", {"md", "markdown"}),
 
   rule("{", "}", {"md", "markdown"}),

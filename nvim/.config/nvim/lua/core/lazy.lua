@@ -52,12 +52,12 @@ require("lazy").setup({
     build = ':TSUpdate'
   },
 
-  {
-    "folke/todo-comments.nvim",
-    dependencies = { "nvim-lua/plenary.nvim" },
-    opts = {
-    }
-  },
+  -- {
+  --   "folke/todo-comments.nvim",
+  --   dependencies = { "nvim-lua/plenary.nvim" },
+  --   opts = {
+  --   }
+  -- },
 
   -- lsp 
   {
@@ -204,6 +204,13 @@ require("lazy").setup({
       init = function()
         --vim.g.molten_output_win_max_height = 12
       end,
+    },
+
+    {
+      'chomosuke/typst-preview.nvim',
+      lazy = false, -- or ft = 'typst'
+      version = '1.*',
+      opts = {}, -- lazy.nvim will implicitly calls `setup {}`
     },
 
   })

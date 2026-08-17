@@ -27,3 +27,20 @@ vim.keymap.set('n', '<leader>fh', builtin.help_tags, {}) -- fh to search documen
 vim.keymap.set('n', '<leader>fe', function()builtin.diagnostics({bufnr=0})end, {}) -- fe to search lsp errors ('find errors')
 --vim.keymap.set('n', '<leader>ft', function()builtin.find_files({cwd='~/Desktop/uni/statistical_learning/templates/'})end, {}) -- ft to search treesitter (!)
 
+vim.api.nvim_set_hl(0, "Search", {
+  fg = "#1e1e2e",
+  bg = "#89b4fa",
+  bold = true,
+})
+
+
+-- vim.api.nvim_set_hl(0, "Search", {
+--   fg = "#cdd6f4",
+--   bg = "#45475a",
+-- })
+-- 
+-- vim.api.nvim_set_hl(0, "CurSearch", {
+--   fg = "#1e1e2e",
+--   bg = "#f9e2af",
+--   bold = true,
+-- })

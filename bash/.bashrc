@@ -80,6 +80,18 @@ tcompile() {
   zathur
 }
 
+# typst functions
+typlate() {
+  echo Undefined
+}
+
+typwrite() {
+  # almost always main.typ but. generality doesn't hurt
+  FILE=`find . -maxdepth 1 -name "*.typ"`
+  NAME=${FILE%.*}
+  typst watch "$NAME.typ" &
+  zathura "$NAME.pdf" 
+}
 
 # latex functions
 
