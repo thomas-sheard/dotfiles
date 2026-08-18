@@ -10,6 +10,7 @@ foot/.config/foot/theme.conf
 tofi/.config/tofi/theme.conf
 waybar/.config/waybar/theme.css
 mako/.config/mako/colors
+nvim/.config/nvim/lua/core/theme/palette.lua
 
 # other
 *.uuid

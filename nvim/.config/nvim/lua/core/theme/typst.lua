@@ -1,0 +1,192 @@
+local p = require("core.theme.palette")
+
+return {
+    -- general syntax
+
+    ["@comment"] = {
+        fg = p.foreground_muted,
+        italic = true,
+    },
+
+    ["@punctuation.special"] = {
+        fg = p.red,
+    },
+
+    ["@punctuation.delimiter"] = {
+        fg = p.foreground_muted,
+    },
+
+    ["@punctuation.bracket"] = {
+        fg = p.foreground_muted,
+    },
+
+    -- Operators are red rather than cyan.
+    -- This also gives maths a strong visual structure.
+    ["@operator"] = {
+        fg = p.red,
+    },
+
+    -- keywords / control flow
+
+    ["@keyword"] = {
+        fg = p.purple,
+    },
+
+    ["@keyword.import"] = {
+        fg = p.magenta,
+        -- bold = true,
+    },
+
+    ["@keyword.repeat"] = {
+        fg = p.purple,
+    },
+
+    ["@keyword.conditional"] = {
+        fg = p.purple,
+    },
+
+    -- values / identifiers
+
+    ["@constant"] = {
+        fg = p.foreground,
+    },
+
+    -- Keep ordinary member access quiet; cyan is reserved for accents.
+    ["@variable.member"] = {
+        fg = p.foreground,
+    },
+
+    ["@function.call"] = {
+        fg = p.blue,
+    },
+
+    ["@number"] = {
+        fg = p.orange,
+    },
+
+    ["@string"] = {
+        fg = p.green,
+    },
+
+    ["@boolean"] = {
+        fg = p.orange,
+        bold = true,
+    },
+
+    -- headings
+    -- Cyan is deliberately concentrated here.
+
+    ["@markup.heading"] = {
+        fg = p.cyan,
+        bold = true,
+    },
+
+--    ["@markup.heading.1"] = {
+--        fg = p.cyan,
+--        bold = true,
+--    },
+--
+--    ["@markup.heading.2"] = {
+--        fg = p.cyan,
+--        bold = true,
+--    },
+--
+--    ["@markup.heading.3"] = {
+--        fg = p.cyan,
+--        bold = true,
+--    },
+--
+--    ["@markup.heading.4"] = {
+--        fg = p.cyan,
+--        bold = true,
+--    },
+--
+--    ["@markup.heading.5"] = {
+--        fg = p.cyan,
+--        bold = true,
+--    },
+--
+--    ["@markup.heading.6"] = {
+--        fg = p.foreground_muted,
+--        italic = true,
+--    },
+
+    -- inline markup
+
+    ["@markup.strong"] = {
+        fg = p.foreground,
+        bold = true,
+    },
+
+    ["@markup.italic"] = {
+        fg = p.foreground,
+        italic = true,
+    },
+
+    ["@markup.quote"] = {
+        fg = p.foreground_muted,
+        italic = true,
+    },
+
+    -- links / references
+    -- Keep these blue rather than spending cyan here.
+
+    ["@markup.link"] = {
+        fg = p.blue,
+        underline = false,
+    },
+
+    ["@markup.link.label"] = {
+        fg = p.blue,
+        underline = false,
+    },
+
+    ["@markup.link.url"] = {
+        fg = p.blue,
+        underline = false,
+        italic = true,
+    },
+
+    -- raw / code
+    -- Green makes inline Typst code immediately distinguishable
+    -- from prose without competing with the syntax colours.
+
+    ["@markup.raw"] = {
+        fg = p.green,
+        --bg = p.background_dark,
+    },
+
+    ["@markup.raw.block"] = {
+        fg = p.foreground,
+        --bg = p.background_dark,
+    },
+
+    ["@label"] = {
+        fg = p.purple,
+        bold = true,
+    },
+
+    -- mathematics
+    --
+    -- Blue is the mathematical "ink"; nested operators and numbers
+    -- become red and orange respectively.
+
+    ["@markup.math"] = {
+        fg = p.blue,
+        -- bg = p.background_alt,
+    },
+
+    -- spell
+
+    ["@spell"] = {
+        -- fg = p.foreground,
+    },
+
+    -- error / diagnostic-ish captures
+
+    ["@error"] = {
+        fg = p.error,
+        undercurl = true,
+        sp = p.error,
+    },
+}

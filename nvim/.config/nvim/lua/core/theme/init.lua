@@ -1,5 +1,7 @@
 local highlights = require("core.theme.highlights")
 local treesitter = require("core.theme.treesitter")
+--local lualine = require("core.theme.lualine")
+local typst = require("core.theme.typst")
 
 local M = {}
 
@@ -17,6 +19,14 @@ function M.setup()
     end
 
     for group, opts in pairs(treesitter) do
+        vim.api.nvim_set_hl(0, group, opts)
+    end
+
+ --   for group, opts in pairs(lualine) do
+ --       vim.api.nvim_set_hl(0, group, opts)
+ --   end
+
+    for group, opts in pairs(typst) do
         vim.api.nvim_set_hl(0, group, opts)
     end
 end

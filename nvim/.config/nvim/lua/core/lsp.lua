@@ -32,19 +32,22 @@ vim.lsp.config('r_language_server', {
   },
 })
 
-vim.lsp.config("tinymist", {
-  settings = {
-    tinymist = {
-      semanticTokens = "disable",
-    },
-  },
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "typst",
+  callback = function()
+    vim.treesitter.start()
+  end,
 })
 
+vim.lsp.config("tinymist", {
+  settings = {
+    semanticTokens = "disable",
+  },
+})
 vim.lsp.enable("tinymist")
 
 --vim.lsp.enable('basedpyright')
 vim.lsp.enable('rust_analyzer')
 vim.lsp.enable('texlab')
-vim.lsp.enable('tinymist')
 vim.lsp.enable('html')
 vim.lsp.enable('r_language_server')
