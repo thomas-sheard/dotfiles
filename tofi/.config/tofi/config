@@ -15,4 +15,5 @@ font-features = "smlp, c2lp"
 
 text-color = #ABB2BF
 selection-color = #9CAF88
+include = theme.conf
 background-color = #000A
