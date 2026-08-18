@@ -1,0 +1,28 @@
+[meta]
+name = "Synthwave"
+
+[colors]
+background       = "#241b2f"
+background_dark  = "#1a1423"
+background_alt   = "#34294f"
+
+foreground       = "#f8f8f2"
+foreground_muted = "#848bbd"
+
+red     = "#fe4450"
+orange  = "#ff8b39"
+yellow  = "#ffe261"
+green   = "#72f1b8"
+cyan    = "#36f9f6"
+blue    = "#03edf9"
+purple  = "#a277ff"
+magenta = "#ff7edb"
+
+border    = "#495495"
+selection = "#463465"
+cursor    = "#f97e72"
+
+error   = "#fe4450"
+warning = "#ffe261"
+info    = "#03edf9"
+success = "#72f1b8"

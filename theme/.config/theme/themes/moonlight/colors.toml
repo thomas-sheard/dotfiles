@@ -1,0 +1,28 @@
+[meta]
+name = "Moonlight"
+
+[colors]
+background       = "#222436"
+background_dark  = "#1b1d2b"
+background_alt   = "#2f334d"
+
+foreground       = "#c8d3f5"
+foreground_muted = "#636da6"
+
+red     = "#ff757f"
+orange  = "#ff966c"
+yellow  = "#ffc777"
+green   = "#c3e88d"
+cyan    = "#86e1fc"
+blue    = "#82aaff"
+purple  = "#c099ff"
+magenta = "#fca7ea"
+
+border    = "#3b4261"
+selection = "#3e68a8"
+cursor    = "#c8d3f5"
+
+error   = "#ff757f"
+warning = "#ffc777"
+info    = "#82aaff"
+success = "#c3e88d"

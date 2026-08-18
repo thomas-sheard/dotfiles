@@ -1,0 +1,28 @@
+[meta]
+name = "Linen"
+
+[colors]
+background       = "#f1eee5"
+background_dark  = "#e7e3d8"
+background_alt   = "#e9e6dc"
+
+foreground       = "#454943"
+foreground_muted = "#858a81"
+
+red     = "#b86f6f"
+orange  = "#bd8964"
+yellow  = "#b69c5c"
+green   = "#78956f"
+cyan    = "#6e9b96"
+blue    = "#718ba1"
+purple  = "#9580a0"
+magenta = "#ae7f91"
+
+border    = "#d2cec2"
+selection = "#ddd9cb"
+cursor    = "#697264"
+
+error   = "#b86f6f"
+warning = "#b69c5c"
+info    = "#718ba1"
+success = "#78956f"

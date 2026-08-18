@@ -1,0 +1,28 @@
+[meta]
+name = "Rosé Pine"
+
+[colors]
+background       = "#191724"
+background_dark  = "#13111c"
+background_alt   = "#26233a"
+
+foreground       = "#e0def4"
+foreground_muted = "#6e6a86"
+
+red     = "#eb6f92"
+orange  = "#f6c177"
+yellow  = "#f6c177"
+green   = "#9ccfd8"
+cyan    = "#9ccfd8"
+blue    = "#31748f"
+purple  = "#c4a7e7"
+magenta = "#ebbcba"
+
+border    = "#403d52"
+selection = "#403d52"
+cursor    = "#e0def4"
+
+error   = "#eb6f92"
+warning = "#f6c177"
+info    = "#31748f"
+success = "#9ccfd8"

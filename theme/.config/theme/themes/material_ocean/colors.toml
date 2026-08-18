@@ -1,0 +1,28 @@
+[meta]
+name = "Material Ocean"
+
+[colors]
+background       = "#0f111a"
+background_dark  = "#090b10"
+background_alt   = "#1b1e2b"
+
+foreground       = "#8f93a2"
+foreground_muted = "#4b526d"
+
+red     = "#f07178"
+orange  = "#f78c6c"
+yellow  = "#ffcb6b"
+green   = "#c3e88d"
+cyan    = "#89ddff"
+blue    = "#82aaff"
+purple  = "#c792ea"
+magenta = "#f071c6"
+
+border    = "#3b3f51"
+selection = "#292d3e"
+cursor    = "#ffcc00"
+
+error   = "#f07178"
+warning = "#ffcb6b"
+info    = "#82aaff"
+success = "#c3e88d"

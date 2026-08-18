@@ -1,0 +1,28 @@
+[meta]
+name = "Frog Pond"
+
+[colors]
+background       = "#142019"
+background_dark  = "#0b1410"
+background_alt   = "#203126"
+
+foreground       = "#d8e8c8"
+foreground_muted = "#71836b"
+
+red     = "#e85d5d"
+orange  = "#e89b5d"
+yellow  = "#e8d45d"
+green   = "#8bcf69"
+cyan    = "#69c7a1"
+blue    = "#69a9cf"
+purple  = "#a98bd1"
+magenta = "#d16b9e"
+
+border    = "#38513b"
+selection = "#304a35"
+cursor    = "#b7df73"
+
+error   = "#e85d5d"
+warning = "#e8d45d"
+info    = "#69a9cf"
+success = "#8bcf69"

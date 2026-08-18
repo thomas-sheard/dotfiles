@@ -1,0 +1,28 @@
+[meta]
+name = "Sage"
+
+[colors]
+background       = "#29302b"
+background_dark  = "#232923"
+background_alt   = "#323a33"
+
+foreground       = "#c8d0c4"
+foreground_muted = "#879287"
+
+red     = "#bd8580"
+orange  = "#c39a78"
+yellow  = "#c5b67d"
+green   = "#9aaa86"
+cyan    = "#89a9a0"
+blue    = "#8c9da5"
+purple  = "#a295a7"
+magenta = "#ae909d"
+
+border    = "#414a42"
+selection = "#384138"
+cursor    = "#afbd9f"
+
+error   = "#bd8580"
+warning = "#c5b67d"
+info    = "#8c9da5"
+success = "#9aaa86"

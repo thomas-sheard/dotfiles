@@ -1,0 +1,28 @@
+[meta]
+name = "Amber Terminal"
+
+[colors]
+background       = "#0b0c0a"
+background_dark  = "#050605"
+background_alt   = "#171a15"
+
+foreground       = "#ffb000"
+foreground_muted = "#806000"
+
+red     = "#ff5f56"
+orange  = "#ff8700"
+yellow  = "#ffd75f"
+green   = "#5fff87"
+cyan    = "#5fffff"
+blue    = "#5fafff"
+purple  = "#af87ff"
+magenta = "#ff5fff"
+
+border    = "#594000"
+selection = "#403000"
+cursor    = "#ffb000"
+
+error   = "#ff5f56"
+warning = "#ffd75f"
+info    = "#5fafff"
+success = "#5fff87"

@@ -1,0 +1,28 @@
+[meta]
+name = "Nord Light"
+
+[colors]
+background       = "#eceff4"
+background_dark  = "#e5e9f0"
+background_alt   = "#d8dee9"
+
+foreground       = "#2e3440"
+foreground_muted = "#687387"
+
+red     = "#bf616a"
+orange  = "#d08770"
+yellow  = "#b58b00"
+green   = "#668e3d"
+cyan    = "#4c8f8f"
+blue    = "#5e81ac"
+purple  = "#8f7191"
+magenta = "#a65375"
+
+border    = "#c4cad5"
+selection = "#d8dee9"
+cursor    = "#2e3440"
+
+error   = "#bf616a"
+warning = "#b58b00"
+info    = "#5e81ac"
+success = "#668e3d"
