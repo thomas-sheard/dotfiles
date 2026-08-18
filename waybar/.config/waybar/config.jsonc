@@ -8,7 +8,7 @@
   "modules-center": ["clock"],
   //"modules-right": ["custom/spotify", "custom/arrow3", "memory", "custom/arrow2", "cpu", "custom/arrow1", "battery"],
 
-  "modules-right": ["custom/spotify", "memory", "cpu", "battery"],
+  "modules-right": ["mpris", "memory", "cpu", "battery"],
 
   "sway/workspaces": {
     "disable-scroll": true,
@@ -17,16 +17,23 @@
     "format": "{icon}",
     "format-icons": {
       "focused": "●",
-      "default": "○",
-    },
+      "default": "○"
+    }
   },
 
-  "custom/spotify": {
+  "mpris": {
+    "format": "{player_icon} {title} - {artist}",
+    "format-paused": "{player_icon} {title} - {artist}",
+    "max-length": 40
+  },
+
+  // DEPRECATED
+  "custom/media": {
     "format": "{}",
     "max-length": 50,
-    "exec": "~/.config/waybar/spotify_module.sh",
-    "exec-if": "pgrep spotify",
-    "on-click": "playerctl play-pause",
+    "exec": "~/.config/waybar/media_module.sh",
+    "exec-if": "playerctl status 2>/dev/null | grep -q Playing",
+    "on-click": "playerctl play-pause"
   },
 
   "memory": {
@@ -36,10 +43,9 @@
     // "format-icons": {
     //   "default": ["X", "W", "V", "U", "T", "S", "R", "Q", "P", "O", "N", "M", "L", "K", "J", "I", "H", "G", "F", "E", "D", "C", "B", "A"],
     // },
-    "min-length": 3,
+    "min-length": 3
     // "max-length": 4,
   },
-
 
   "cpu": {
     "interval": 1,
@@ -57,7 +63,7 @@
   },
 
   "clock": {
-    "tooltip-format": "{:%a, %d. %b}",
+    "tooltip-format": "{:%a, %d. %b}"
   },
 
   "battery": {
@@ -69,7 +75,7 @@
     // "format-icons": {
     //   "default": ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X"],
     // },
-    "min-length": 3,
+    "min-length": 3
     //"max-length": 3,
   },
 
@@ -104,5 +110,5 @@
   "custom/arrow10": {
     "format": "",
     "tooltip": false
-  },
+  }
 }
