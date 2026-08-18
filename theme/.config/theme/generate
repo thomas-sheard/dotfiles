@@ -180,14 +180,14 @@ return {{
 
 print(f"generated {NVIM_DIR / 'palette.lua'}")
 
-site_theme = True
 
-if site_theme:
 # generate site theme
 # this one is a bit silly
 # but a good way of seeing new themes!
+site_theme = False
 
-# destination
+if site_theme:
+
     WEBSITE_DIR = Path.home() / "Desktop" / "programming" / "html" / "website" / "static" / "styling"
     WEBSITE_DIR.mkdir(parents=True, exist_ok=True)
 

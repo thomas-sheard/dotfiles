@@ -214,4 +214,25 @@ return {
         fg = p.info,
     },
 
+    ErrorMsg = {
+      fg = p.error,
+    },
+
+    SpellBad = {
+      undercurl = true,
+      sp = p.red,
+    },
+    SpellCap = {
+      undercurl = true,
+      sp = p.blue,
+    },
+    SpellRare = {
+      undercurl = true,
+      sp = p.purple,
+    },
+    SpellLocal = {
+      undercurl = true,
+      sp = p.blue,
+    },
+
 }

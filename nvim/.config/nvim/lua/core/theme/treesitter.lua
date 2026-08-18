@@ -113,4 +113,5 @@ return {
     ["@punctuation.delimiter"] = {
         fg = p.foreground_muted,
     },
+
 }
