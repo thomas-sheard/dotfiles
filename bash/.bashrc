@@ -149,4 +149,6 @@ texplate() {
 
 #export TEXMFHOME=$HOME/.local/texmf
 
+export PATH="$HOME/dotfiles/bin:$PATH"
+
 #. "$HOME/.cargo/env"
