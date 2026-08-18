@@ -1,0 +1,28 @@
+[meta]
+name = "One Light"
+
+[colors]
+background       = "#fafafa"
+background_dark  = "#f0f0f1"
+background_alt   = "#e5e5e6"
+
+foreground       = "#383a42"
+foreground_muted = "#a0a1a7"
+
+red     = "#e45649"
+orange  = "#986801"
+yellow  = "#c18401"
+green   = "#50a14f"
+cyan    = "#0184bc"
+blue    = "#4078f2"
+purple  = "#a626a4"
+magenta = "#ca1243"
+
+border    = "#d3d3d4"
+selection = "#d7d7d8"
+cursor    = "#526eff"
+
+error   = "#e45649"
+warning = "#c18401"
+info    = "#4078f2"
+success = "#50a14f"

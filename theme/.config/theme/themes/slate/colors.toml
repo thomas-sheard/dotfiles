@@ -1,0 +1,28 @@
+[meta]
+name = "Slate Dusk"
+
+[colors]
+background       = "#303739"
+background_dark  = "#272d2f"
+background_alt   = "#3a4244"
+
+foreground       = "#d0d4d1"
+foreground_muted = "#7c8585"
+
+red     = "#bd706c"
+orange  = "#b98968"
+yellow  = "#b5a36e"
+green   = "#88a080"
+cyan    = "#78a3a1"
+blue    = "#7d98a6"
+purple  = "#998c9d"
+magenta = "#af858f"
+
+border    = "#505a5c"
+selection = "#465054"
+cursor    = "#d7dcda"
+
+error   = "#bd706c"
+warning = "#b5a36e"
+info    = "#7d98a6"
+success = "#88a080"

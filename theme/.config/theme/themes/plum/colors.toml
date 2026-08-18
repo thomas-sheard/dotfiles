@@ -1,0 +1,28 @@
+[meta]
+name = "Plum Dusk"
+
+[colors]
+background       = "#332f34"
+background_dark  = "#29262b"
+background_alt   = "#3e3940"
+
+foreground       = "#d3cbd0"
+foreground_muted = "#887e87"
+
+red     = "#bc7073"
+orange  = "#b98769"
+yellow  = "#b4a06b"
+green   = "#8b9b7b"
+cyan    = "#78999a"
+blue    = "#7d909b"
+purple  = "#9b879f"
+magenta = "#ae8192"
+
+border    = "#554d57"
+selection = "#49424c"
+cursor    = "#dbd1d7"
+
+error   = "#bc7073"
+warning = "#b4a06b"
+info    = "#7d909b"
+success = "#8b9b7b"

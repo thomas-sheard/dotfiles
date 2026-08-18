@@ -1,0 +1,28 @@
+[meta]
+name = "Lichen"
+
+[colors]
+background       = "#e3e6da"
+background_dark  = "#d5d9ca"
+background_alt   = "#dce0d1"
+
+foreground       = "#414940"
+foreground_muted = "#798176"
+
+red     = "#a85f57"
+orange  = "#a97c55"
+yellow  = "#9b9055"
+green   = "#718762"
+cyan    = "#6c8980"
+blue    = "#6d8182"
+purple  = "#81787c"
+magenta = "#99717a"
+
+border    = "#b8beae"
+selection = "#c9cfbf"
+cursor    = "#50594a"
+
+error   = "#a85f57"
+warning = "#9b9055"
+info    = "#6d8182"
+success = "#718762"
