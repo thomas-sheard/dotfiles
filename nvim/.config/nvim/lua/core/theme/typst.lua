@@ -20,10 +20,8 @@ return {
         fg = p.foreground_muted,
     },
 
-    -- Operators are red rather than cyan.
-    -- This also gives maths a strong visual structure.
     ["@operator"] = {
-        fg = p.red,
+        fg = p.cyan,
     },
 
     -- keywords / control flow
@@ -51,7 +49,6 @@ return {
         fg = p.foreground,
     },
 
-    -- Keep ordinary member access quiet; cyan is reserved for accents.
     ["@variable.member"] = {
         fg = p.foreground,
     },
@@ -148,8 +145,6 @@ return {
     },
 
     -- raw / code
-    -- Green makes inline Typst code immediately distinguishable
-    -- from prose without competing with the syntax colours.
 
     ["@markup.raw"] = {
         fg = p.green,
@@ -167,9 +162,6 @@ return {
     },
 
     -- mathematics
-    --
-    -- Blue is the mathematical "ink"; nested operators and numbers
-    -- become red and orange respectively.
 
     ["@markup.math"] = {
         fg = p.blue,

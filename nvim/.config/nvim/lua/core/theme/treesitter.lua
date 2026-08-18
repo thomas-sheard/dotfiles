@@ -1,117 +1,116 @@
 local p = require("core.theme.palette")
 
 return {
-    -- comments
-    ["@comment"] = {
-        fg = p.foreground_muted,
-        italic = true,
-    },
 
-    -- Strings
-    ["@string"] = {
-        fg = p.green,
-    },
+  -- comments
+  ["@comment"] = {
+    fg = p.foreground_muted,
+    italic = true,
+  },
 
-    ["@string.escape"] = {
-        fg = p.cyan,
-    },
+  -- strings
+  ["@string"] = {
+    fg = p.green,
+  },
 
-    ["@string.special"] = {
-        fg = p.cyan,
-    },
+  ["@string.escape"] = {
+    fg = p.cyan,
+  },
 
-    -- numbers / constants
-    ["@number"] = {
-        fg = p.orange,
-    },
+  ["@string.special"] = {
+    fg = p.cyan,
+  },
 
-    ["@boolean"] = {
-        fg = p.orange,
-        bold = true,
-    },
+  -- values
+  ["@number"] = {
+    fg = p.orange,
+  },
 
-    ["@constant"] = {
-        fg = p.cyan,
-    },
+  ["@boolean"] = {
+    fg = p.orange,
+  },
 
-    ["@constant.builtin"] = {
-        fg = p.cyan,
-    },
+  ["@constant"] = {
+    fg = p.orange,
+  },
 
-    -- functions
-    ["@function"] = {
-        fg = p.blue,
-        bold = true,
-    },
+  ["@constant.builtin"] = {
+    fg = p.orange,
+  },
 
-    ["@function.call"] = {
-        fg = p.blue,
-    },
+  -- functions
+  ["@function"] = {
+    fg = p.blue,
+    bold = true,
+  },
 
-    ["@function.method"] = {
-        fg = p.blue,
-    },
+  ["@function.call"] = {
+    fg = p.blue,
+  },
 
-    ["@function.method.call"] = {
-        fg = p.blue,
-    },
+  ["@function.method"] = {
+    fg = p.blue,
+  },
 
-    -- keywords
-    ["@keyword"] = {
-        fg = p.purple,
-        bold = true,
-    },
+  ["@function.method.call"] = {
+    fg = p.blue,
+  },
 
-    ["@keyword.return"] = {
-        fg = p.purple,
-        bold = true,
-    },
+  -- structure
+  ["@keyword"] = {
+    fg = p.purple,
+    bold = true,
+  },
 
-    ["@keyword.function"] = {
-        fg = p.purple,
-        bold = true,
-    },
+  ["@keyword.return"] = {
+    fg = p.purple,
+    bold = true,
+  },
 
-    -- types
-    ["@type"] = {
-        fg = p.yellow,
-    },
+  ["@keyword.function"] = {
+    fg = p.purple,
+    bold = true,
+  },
 
-    ["@type.builtin"] = {
-        fg = p.yellow,
-        italic = true,
-    },
+  -- types
+  ["@type"] = {
+    fg = p.magenta,
+  },
 
-    -- variables
-    ["@variable"] = {
-        fg = p.foreground,
-    },
+  ["@type.builtin"] = {
+    fg = p.magenta,
+  },
 
-    ["@variable.builtin"] = {
-        fg = p.cyan,
-    },
+  -- variables
+  ["@variable"] = {
+    fg = p.foreground,
+  },
 
-    -- properties / fields
-    ["@property"] = {
-        fg = p.cyan,
-    },
+  ["@variable.builtin"] = {
+    fg = p.cyan,
+  },
 
-    ["@field"] = {
-        fg = p.cyan,
-    },
+  -- properties / fields
+  ["@property"] = {
+    fg = p.foreground,
+  },
 
-    -- operators
-    ["@operator"] = {
-        fg = p.cyan,
-    },
+  ["@field"] = {
+    fg = p.foreground,
+  },
 
-    -- punctuation
-    ["@punctuation.bracket"] = {
-        fg = p.foreground_muted,
-    },
+  -- operators
+  ["@operator"] = {
+    fg = p.foreground,
+  },
 
-    ["@punctuation.delimiter"] = {
-        fg = p.foreground_muted,
-    },
+  -- punctuation
+  ["@punctuation.bracket"] = {
+    fg = p.foreground_muted,
+  },
+
+  ["@punctuation.delimiter"] = {
+    fg = p.foreground_muted,
+  },
 
 }

@@ -22,10 +22,12 @@ return {
 
     Comment = {
         fg = p.foreground_muted,
+        italic = true,
     },
 
+    -- concrete values
     Constant = {
-        fg = p.cyan,
+        fg = p.orange,
     },
 
     String = {
@@ -40,23 +42,32 @@ return {
         fg = p.orange,
     },
 
+    -- special / exceptional syntax
     Special = {
-        fg = p.red,
+        fg = p.cyan,
         bg = p.background,
     },
 
+    -- actions
     Function = {
         fg = p.blue,
     },
 
+    -- language structure
     Keyword = {
         fg = p.purple,
     },
 
+    -- semantic entities
     Type = {
-        fg = p.yellow,
+        fg = p.magenta,
     },
 
+    PreProc = {
+      fg = p.magenta,
+    },
+
+    -- quiet syntax
     Operator = {
         fg = p.cyan,
     },
@@ -65,6 +76,7 @@ return {
         fg = p.foreground,
     },
 
+    -- errors / diagnostics
     Error = {
         fg = p.error,
     },
@@ -90,39 +102,39 @@ return {
     },
 
     DiagnosticVirtualTextError = {
-      fg = p.error,
+        fg = p.error,
     },
 
     DiagnosticVirtualTextWarn = {
-      fg = p.warning,
+        fg = p.warning,
     },
 
     DiagnosticVirtualTextInfo = {
-      fg = p.info,
+        fg = p.info,
     },
 
     DiagnosticVirtualTextHint = {
-      fg = p.success,
+        fg = p.success,
     },
 
     DiagnosticUnderlineError = {
-      undercurl = true,
-      sp = p.error,
+        undercurl = true,
+        sp = p.error,
     },
 
     DiagnosticUnderlineWarn = {
-      undercurl = true,
-      sp = p.warning,
+        undercurl = true,
+        sp = p.warning,
     },
 
     DiagnosticUnderlineInfo = {
-      undercurl = true,
-      sp = p.info,
+        undercurl = true,
+        sp = p.info,
     },
 
     DiagnosticUnderlineHint = {
-      undercurl = true,
-      sp = p.success,
+        undercurl = true,
+        sp = p.success,
     },
 
     StatusLine = {
@@ -140,74 +152,81 @@ return {
     },
 
     Directory = {
-      fg = p.blue,
+        fg = p.blue,
     },
 
     Question = {
-      fg = p.cyan,
+        fg = p.cyan,
     },
 
     LineNr = {
-      fg = p.foreground_muted,
+        fg = p.foreground_muted,
     },
 
     CursorLineNr = {
-      fg = p.foreground,
-      bold = true,
+        fg = p.foreground,
+        bold = true,
     },
 
     CursorLine = {
-      bg = p.background_alt,
+        bg = p.background_alt,
     },
 
     SignColumn = {
-      bg = p.background,
+        bg = p.background,
     },
 
     FoldColumn = {
-      fg = p.foreground_muted,
-      bg = p.background,
+        fg = p.foreground_muted,
+        bg = p.background,
     },
 
     Pmenu = {
-      fg = p.foreground,
-      bg = p.background_alt,
+        fg = p.foreground,
+        bg = p.background_alt,
     },
 
     PmenuSel = {
-      fg = p.background,
-      bg = p.blue,
+        fg = p.background,
+        bg = p.blue,
     },
 
     PmenuBorder = {
-      fg = p.border,
-      bg = p.background_alt,
+        fg = p.border,
+        bg = p.background_alt,
     },
 
     FloatBorder = {
-      fg = p.border,
-      bg = p.background_alt,
+        fg = p.border,
+        bg = p.background_alt,
     },
 
     Search = {
-      fg = p.background,
-      bg = p.cyan,
+        fg = p.background,
+        bg = p.cyan,
     },
 
     IncSearch = {
-      fg = p.background,
-      bg = p.blue,
+        fg = p.background,
+        bg = p.blue,
     },
 
     MatchParen = {
-      fg = p.foreground,
-      bg = p.selection,
-      bold = true,
+        fg = p.foreground,
+        bg = p.selection,
+        bold = true,
     },
 
+    -- document / markup
     Title = {
-      fg = p.blue,
+        fg = p.blue,
+        bold = true,
+    },
+
+    Todo = {
+      fg = p.yellow,
       bold = true,
+      italic = true,
     },
 
     ModeMsg = {
@@ -219,24 +238,51 @@ return {
     },
 
     ErrorMsg = {
-      fg = p.error,
+        fg = p.error,
     },
 
     SpellBad = {
-      undercurl = true,
-      sp = p.red,
-    },
-    SpellCap = {
-      undercurl = true,
-      sp = p.blue,
-    },
-    SpellRare = {
-      undercurl = true,
-      sp = p.purple,
-    },
-    SpellLocal = {
-      undercurl = true,
-      sp = p.blue,
+        undercurl = true,
+        sp = p.red,
     },
 
+    SpellCap = {
+        undercurl = true,
+        sp = p.blue,
+    },
+
+    SpellRare = {
+        undercurl = true,
+        sp = p.purple,
+    },
+
+    SpellLocal = {
+        undercurl = true,
+        sp = p.blue,
+    },
+
+    -- completion kinds
+    CmpItemKind = {
+        fg = p.foreground_muted,
+    },
+
+    CmpItemKindText = {
+        fg = p.green,
+    },
+
+    CmpItemKindVariable = {
+        fg = p.foreground,
+    },
+
+    CmpItemKindKeyword = {
+        fg = p.purple,
+    },
+
+    CmpItemKindFunction = {
+        fg = p.blue,
+    },
+
+    CmpItemKindMethod = {
+        fg = p.blue,
+    },
 }
