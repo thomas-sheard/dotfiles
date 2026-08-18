@@ -7,7 +7,7 @@ THEMES_DIR="$THEME_ROOT/themes"
 CURRENT="$THEME_ROOT/current"
 
 generate() {
-    "$THEME_ROOT/generate.py"
+    "$THEME_ROOT/generate"
 }
 
 current() {
@@ -43,12 +43,11 @@ apply() {
     echo "applying theme: $theme"
 
     ln -sfn "themes/$theme" "$CURRENT"
-
     generate
-
+    swaymsg reload
+    makoctl reload
     echo "theme applied: $theme"
 }
-
 
 case "${1:-}" in
     current)

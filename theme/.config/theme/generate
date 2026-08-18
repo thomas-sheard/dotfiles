@@ -11,7 +11,6 @@ import tomllib
 # paths
 THEME_ROOT = Path.home() / ".config" / "theme"
 COLORS_FILE = THEME_ROOT / "current" / "colors.toml"
-WAYBAR_DIR = Path.home() / ".config" / "waybar"
 
 
 # read current theme
@@ -22,7 +21,8 @@ colors = theme["colors"]
 
 # generate waybar theme
 
-# destination exists
+# destination
+WAYBAR_DIR = Path.home() / ".config" / "waybar"
 WAYBAR_DIR.mkdir(parents=True, exist_ok=True)
 
 waybar = f"""\
@@ -47,11 +47,102 @@ print(f"generated {WAYBAR_DIR / 'theme.css'}")
 
 # generate tofi theme
 
+TOFI_DIR = Path.home() / ".config" / "tofi"
+TOFI_DIR.mkdir(parents=True, exist_ok=True)
+
+tofi = f"""\
+text-color = {colors["foreground"]}
+selection-color = {colors["green"]}
+"""
+
+(TOFI_DIR / "theme.conf").write_text(tofi)
+
+print(f"generated {TOFI_DIR / 'theme.conf'}")
+
 # generate mako theme
+
+MAKO_DIR = Path.home() / ".config" / "mako"
+MAKO_DIR.mkdir(parents=True, exist_ok=True)
+
+mako = f"""\
+background-color={colors["background"]}
+border-color={colors["foreground_muted"]}
+text-color={colors["foreground"]}
+
+[urgency=low]
+border-color={colors["orange"]}
+
+[urgency=normal]
+border-color={colors["green"]}
+
+[urgency=high]
+border-color={colors["red"]}
+"""
+
+(MAKO_DIR / "colors").write_text(mako)
+
+print(f"generated {MAKO_DIR / 'colors'}")
 
 # generate foot theme
 
-# generate nvim theme
+FOOT_DIR = Path.home() / ".config" / "foot"
+FOOT_DIR.mkdir(parents=True, exist_ok=True)
+
+def foot_color(name):
+    return colors[name].lstrip("#")
+
+foot = f"""\
+[colors-dark]
+
+foreground={foot_color("foreground")}
+background={foot_color("background")}
+
+regular0={foot_color("background")}
+regular1={foot_color("red")}
+regular2={foot_color("green")}
+regular3={foot_color("yellow")}
+regular4={foot_color("blue")}
+regular5={foot_color("purple")}
+regular6={foot_color("cyan")}
+regular7={foot_color("foreground")}
+
+bright0={foot_color("border")}
+bright1={foot_color("red")}
+bright2={foot_color("green")}
+bright3={foot_color("yellow")}
+bright4={foot_color("blue")}
+bright5={foot_color("purple")}
+bright6={foot_color("cyan")}
+bright7={foot_color("foreground")}
+
+selection-foreground={foot_color("foreground")}
+selection-background={foot_color("selection")}
+
+cursor={foot_color("cursor")} {foot_color("background")}
+urls={foot_color("info")}
+"""
+
+(FOOT_DIR / "theme.conf").write_text(foot)
+
+print(f"generated {FOOT_DIR / 'theme.conf'}")
 
 # generate sway theme
+
+SWAY_DIR = Path.home() / ".config" / "sway"
+SWAY_DIR.mkdir(parents=True, exist_ok=True)
+
+sway = f"""\
+set $background {colors["background"]}
+set $foreground {colors["foreground"]}
+set $border {colors["green"]}
+set $indicator {colors["orange"]}
+"""
+
+(SWAY_DIR / "theme").write_text(sway)
+
+print(f"generated {SWAY_DIR / 'theme'}")
+
+
+# generate nvim theme
+
 
