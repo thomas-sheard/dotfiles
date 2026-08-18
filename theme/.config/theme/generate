@@ -179,3 +179,34 @@ return {{
 (NVIM_DIR / "palette.lua").write_text(nvim)
 
 print(f"generated {NVIM_DIR / 'palette.lua'}")
+
+site_theme = True
+
+if site_theme:
+# generate site theme
+# this one is a bit silly
+# but a good way of seeing new themes!
+
+# destination
+    WEBSITE_DIR = Path.home() / "Desktop" / "programming" / "html" / "website" / "static" / "styling"
+    WEBSITE_DIR.mkdir(parents=True, exist_ok=True)
+
+    website = f"""\
+    :root {{
+        --background: {colors["background"]};
+        --foreground: {colors["foreground"]};
+        --red: {colors["red"]};
+        --orange: {colors["orange"]};
+        --yellow: {colors["yellow"]};
+        --green: {colors["green"]};
+        --cyan: {colors["cyan"]};
+        --blue: {colors["blue"]};
+        --purple: {colors["purple"]};
+        --magenta: {colors["magenta"]};
+    }}
+    """
+
+    (WEBSITE_DIR / "theme.css").write_text(website)
+
+    print(f"generated {WEBSITE_DIR / 'theme.css'}")
+
