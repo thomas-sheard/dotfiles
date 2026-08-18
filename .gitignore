@@ -1,5 +1,16 @@
+# font config
 sway/.config/sway/set_profile
 foot/.config/foot/font.conf
 tofi/.config/tofi/font.conf
 waybar/.config/waybar/font.css
+
+# generated theme
+sway/.config/sway/theme
+foot/.config/foot/theme.conf
+tofi/.config/tofi/theme.conf
+waybar/.config/waybar/theme.css
+mako/.config/mako/colors
+
+# other
 *.uuid
+
