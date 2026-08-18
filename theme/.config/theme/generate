@@ -142,7 +142,40 @@ set $indicator {colors["orange"]}
 
 print(f"generated {SWAY_DIR / 'theme'}")
 
-
 # generate nvim theme
 
+NVIM_DIR = Path.home() / ".config" / "nvim" / "lua" / "core" / "theme"
+NVIM_DIR.mkdir(parents=True, exist_ok=True)
 
+nvim = f"""\
+return {{
+  background = "{colors["background"]}",
+  background_dark = "{colors["background_dark"]}",
+  background_alt = "{colors["background_alt"]}",
+
+  foreground = "{colors["foreground"]}",
+  foreground_muted = "{colors["foreground_muted"]}",
+
+  red = "{colors["red"]}",
+  orange = "{colors["orange"]}",
+  yellow = "{colors["yellow"]}",
+  green = "{colors["green"]}",
+  cyan = "{colors["cyan"]}",
+  blue = "{colors["blue"]}",
+  purple = "{colors["purple"]}",
+  magenta = "{colors["magenta"]}",
+
+  border = "{colors["border"]}",
+  selection = "{colors["selection"]}",
+  cursor = "{colors["cursor"]}",
+
+  error = "{colors["error"]}",
+  warning = "{colors["warning"]}",
+  info = "{colors["info"]}",
+  success = "{colors["success"]}",
+}}
+"""
+
+(NVIM_DIR / "palette.lua").write_text(nvim)
+
+print(f"generated {NVIM_DIR / 'palette.lua'}")
