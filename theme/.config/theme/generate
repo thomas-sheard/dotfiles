@@ -134,7 +134,7 @@ SWAY_DIR.mkdir(parents=True, exist_ok=True)
 sway = f"""\
 set $background {colors["background"]}
 set $foreground {colors["foreground"]}
-set $border {colors["green"]}
+set $border {colors["border"]}
 set $indicator {colors["red"]}
 """
 

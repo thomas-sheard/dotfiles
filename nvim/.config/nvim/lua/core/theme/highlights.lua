@@ -63,6 +63,10 @@ return {
         fg = p.magenta,
     },
 
+    Statement = {
+        fg = p.purple,
+    },
+
     PreProc = {
       fg = p.magenta,
     },
@@ -202,13 +206,16 @@ return {
     },
 
     Search = {
-        fg = p.background,
-        bg = p.cyan,
+        bg = p.background_alt,
     },
 
     IncSearch = {
-        fg = p.background,
-        bg = p.blue,
+        bg = p.background_alt,
+    },
+
+    CurSearch = {
+        fg = p.background_alt,
+        bg = p.yellow,
     },
 
     MatchParen = {
