@@ -29,6 +29,7 @@ window#waybar {
 
 #workspaces button {
   color: @yellow;
+  background-color: @background;
   padding: 2px 4px 0px 4px;
   margin: 0;
   border: none;
@@ -45,7 +46,7 @@ window#waybar {
 }
 
 #workspaces button:hover {
-  background: none;
+  background-color: @background;
   border: none;
   transition: none;
   box-shadow: none;
