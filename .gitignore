@@ -5,6 +5,7 @@ tofi/.config/tofi/font.conf
 waybar/.config/waybar/font.css
 
 # generated theme
+theme/.config/theme/current
 sway/.config/sway/theme
 foot/.config/foot/theme.conf
 tofi/.config/tofi/theme.conf
