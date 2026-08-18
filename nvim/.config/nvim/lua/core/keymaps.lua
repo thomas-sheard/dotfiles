@@ -13,7 +13,7 @@ keymap('i', '<C-c>', '<Esc>') -- I CAN EXPLAIN
 
 keymap('n', '<leader>w', '<C-w>') -- remap window navigation before i remap <C-w>
 keymap('n', '<C-w>', ':w<cr>') -- saving
---keymap('n', '<C-s>', ':so<cr>') -- sourcing
+keymap('n', '<C-s>', '<cmd> source /home/thomas/.config/nvim/lua/core/typst.lua <CR>') -- sourcing nvim conf
 keymap('n', '<C-q>', ':q<cr>') -- quitting
 keymap('n', '<leader>c', vim.cmd.nohlsearch) -- clear search highlighting
 

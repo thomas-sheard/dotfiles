@@ -1,0 +1,26 @@
+return {
+  background = "#2D353B",
+  background_dark = "#272E33",
+  background_alt = "#343F44",
+
+  foreground = "#D3C6AA",
+  foreground_muted = "#859289",
+
+  red = "#E67E80",
+  orange = "#E69875",
+  yellow = "#DBBC7F",
+  green = "#A7C080",
+  cyan = "#83C092",
+  blue = "#7FBBB3",
+  purple = "#D699B6",
+  magenta = "#D699B6",
+
+  border = "#4A555B",
+  selection = "#475258",
+  cursor = "#D3C6AA",
+
+  error = "#E67E80",
+  warning = "#DBBC7F",
+  info = "#7FBBB3",
+  success = "#A7C080",
+}

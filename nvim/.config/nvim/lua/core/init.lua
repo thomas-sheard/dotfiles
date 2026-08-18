@@ -4,6 +4,7 @@ require("core.keymaps")
 require("core.options")
 
 require("core.lazy")
+vim.cmd.colorscheme("system")
 
 require("core.treesitter")
 require("core.lsp")
@@ -16,7 +17,8 @@ require("core.luasnip")
 require("core.autopairs")
 require("core.tabout")
 
-require("core.typst")
+require("core.lualine")
+--require("core.typst")
 
 
 --[[

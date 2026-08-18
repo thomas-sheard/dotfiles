@@ -21,13 +21,21 @@ require("lazy").setup({
 
   -- aesthetics
 
-  {
-    'navarasu/onedark.nvim',
-    priority = 1000,
-    config = function()
-      vim.cmd.colorscheme 'onedark'
-    end,
-  },
+--  {
+--    'navarasu/onedark.nvim',
+--    priority = 1000,
+--    config = function()
+--      vim.cmd.colorscheme 'onedark'
+--    end,
+--  },
+
+--  {
+--    'shaunsingh/nord.nvim',
+--    priority = 1000,
+--    config = function()
+--      vim.cmd.colorscheme 'nord'
+--    end,
+--  },
 
   'nvim-tree/nvim-web-devicons',
 
@@ -35,14 +43,6 @@ require("lazy").setup({
 
   {
     'nvim-lualine/lualine.nvim',
-    opts = {
-      options = {
-        icons_enabled = false,
-        theme = 'onedark',
-        component_separators = '|',
-        section_separators = '',
-      },
-    },
   },
 
   -- treesitter (syntax highlighter)
@@ -206,11 +206,11 @@ require("lazy").setup({
       end,
     },
 
-    {
-      'chomosuke/typst-preview.nvim',
-      lazy = false, -- or ft = 'typst'
-      version = '1.*',
-      opts = {}, -- lazy.nvim will implicitly calls `setup {}`
-    },
+--    {
+--      'chomosuke/typst-preview.nvim',
+--      lazy = false, -- or ft = 'typst'
+--      version = '1.*',
+--      opts = {}, -- lazy.nvim will implicitly calls `setup {}`
+--    },
 
   })

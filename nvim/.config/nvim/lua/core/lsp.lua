@@ -32,6 +32,16 @@ vim.lsp.config('r_language_server', {
   },
 })
 
+vim.lsp.config("tinymist", {
+  settings = {
+    tinymist = {
+      semanticTokens = "disable",
+    },
+  },
+})
+
+vim.lsp.enable("tinymist")
+
 --vim.lsp.enable('basedpyright')
 vim.lsp.enable('rust_analyzer')
 vim.lsp.enable('texlab')
