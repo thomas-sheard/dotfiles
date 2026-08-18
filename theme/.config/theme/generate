@@ -32,11 +32,13 @@ waybar = f"""\
 @define-color background {colors["background"]};
 @define-color foreground {colors["foreground"]};
 @define-color red {colors["red"]};
-@define-color red {colors["red"]};
+@define-color orange {colors["orange"]};
 @define-color yellow {colors["yellow"]};
-@define-color cyan {colors["cyan"]};
-@define-color purple {colors["purple"]};
 @define-color green {colors["green"]};
+@define-color cyan {colors["cyan"]};
+@define-color blue {colors["blue"]};
+@define-color purple {colors["purple"]};
+@define-color magenta {colors["magenta"]};
 """
 
 (WAYBAR_DIR / "theme.css").write_text(waybar)

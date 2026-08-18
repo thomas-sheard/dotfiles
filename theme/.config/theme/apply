@@ -3,31 +3,75 @@
 set -euo pipefail
 
 THEME_ROOT="${XDG_CONFIG_HOME:-$HOME/.config}/theme"
+THEMES_DIR="$THEME_ROOT/themes"
+CURRENT="$THEME_ROOT/current"
 
-if [[ $# -ne 1 ]]; then
-    echo "usage: theme <theme>"
-    exit 1
-fi
+generate() {
+    "$THEME_ROOT/generate.py"
+}
 
-THEME="$1"
-THEME_PATH="$THEME_ROOT/themes/$THEME"
+current() {
+    if [[ -L "$CURRENT" ]]; then
+        basename "$(readlink "$CURRENT")"
+    else
+        echo "no theme currently selected"
+    fi
+}
 
-if [[ ! -d "$THEME_PATH" ]]; then
-    echo "theme not found: $THEME"
-    echo
-    echo "available themes:"
-    find "$THEME_ROOT/themes" -mindepth 1 -maxdepth 1 -type d \
-        -printf '  %f\n' | sort
-    exit 1
-fi
+list_themes() {
+    find "$THEMES_DIR" -mindepth 1 -maxdepth 1 -type d \
+        -printf '%f\n' | sort
+}
 
-if [[ ! -f "$THEME_PATH/colors.toml" ]]; then
-    echo "theme has no colors.toml: $THEME"
-    exit 1
-fi
+apply() {
+    local theme="$1"
+    local path="$THEMES_DIR/$theme"
 
-ln -sfn "themes/$THEME" "$THEME_ROOT/current"
+    if [[ ! -d "$path" ]]; then
+        echo "error: theme '$theme' does not exist"
+        echo
+        echo "available themes:"
+        list_themes
+        exit 1
+    fi
 
-"$THEME_ROOT/generate"
+    if [[ ! -f "$path/colors.toml" ]]; then
+        echo "error: theme '$theme' has no colors.toml"
+        exit 1
+    fi
 
-echo "theme: $THEME"
+    echo "applying theme: $theme"
+
+    ln -sfn "themes/$theme" "$CURRENT"
+
+    generate
+
+    echo "theme applied: $theme"
+}
+
+
+case "${1:-}" in
+    current)
+        current
+        ;;
+
+    list)
+        list_themes
+        ;;
+
+    generate)
+        generate
+        ;;
+
+    "")
+        echo "usage: theme <theme>"
+        echo "       theme current"
+        echo "       theme list"
+        echo "       theme generate"
+        exit 1
+        ;;
+
+    *)
+        apply "$1"
+        ;;
+esac
