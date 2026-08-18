@@ -1,0 +1,28 @@
+[meta]
+name = "Sumi"
+
+[colors]
+background       = "#111315"
+background_dark  = "#0a0c0d"
+background_alt   = "#1d2123"
+
+foreground       = "#d1cec3"
+foreground_muted = "#777871"
+
+red     = "#b85f52"
+orange  = "#bd7957"
+yellow  = "#b7a568"
+green   = "#7f9473"
+cyan    = "#709697"
+blue    = "#7188a0"
+purple  = "#8f7d94"
+magenta = "#a27478"
+
+border    = "#383c3d"
+selection = "#303536"
+cursor    = "#c4c0aa"
+
+error   = "#b85f52"
+warning = "#b7a568"
+info    = "#7188a0"
+success = "#7f9473"

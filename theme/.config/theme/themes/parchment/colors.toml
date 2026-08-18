@@ -1,0 +1,28 @@
+[meta]
+name = "Parchment"
+
+[colors]
+background       = "#d8d0bc"
+background_dark  = "#c5bca6"
+background_alt   = "#e1dac8"
+
+foreground       = "#34352f"
+foreground_muted = "#6f6d61"
+
+red     = "#9c5b52"
+orange  = "#a8734e"
+yellow  = "#9a874c"
+green   = "#60795c"
+cyan    = "#527b78"
+blue    = "#5c7185"
+purple  = "#75627b"
+magenta = "#895f6b"
+
+border    = "#aaa18d"
+selection = "#bcb39e"
+cursor    = "#3f5540"
+
+error   = "#9c5b52"
+warning = "#9a874c"
+info    = "#5c7185"
+success = "#60795c"

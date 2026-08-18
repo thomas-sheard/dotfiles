@@ -1,0 +1,28 @@
+[meta]
+name = "Amber"
+
+[colors]
+background       = "#0d0a05"
+background_dark  = "#070503"
+background_alt   = "#171109"
+
+foreground       = "#c9a66b"
+foreground_muted = "#715a36"
+
+red     = "#a8644f"
+orange  = "#b47a48"
+yellow  = "#c4a75e"
+green   = "#81905a"
+cyan    = "#789078"
+blue    = "#687d73"
+purple  = "#89705f"
+magenta = "#986b61"
+
+border    = "#47361d"
+selection = "#352712"
+cursor    = "#e4c47c"
+
+error   = "#b86b52"
+warning = "#c4a75e"
+info    = "#789078"
+success = "#81905a"

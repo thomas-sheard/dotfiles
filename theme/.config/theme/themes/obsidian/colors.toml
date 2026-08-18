@@ -1,0 +1,28 @@
+[meta]
+name = "Obsidian"
+
+[colors]
+background       = "#000000"
+background_dark  = "#000000"
+background_alt   = "#101310"
+
+foreground       = "#e2e7e2"
+foreground_muted = "#8d968e"
+
+red     = "#e07b7b"
+orange  = "#d99a68"
+yellow  = "#d8c46e"
+green   = "#91c98b"
+cyan    = "#78c1b0"
+blue    = "#7fa8c9"
+purple  = "#ad91c2"
+magenta = "#c18ba5"
+
+border    = "#303630"
+selection = "#252b26"
+cursor    = "#b8dcb2"
+
+error   = "#e07b7b"
+warning = "#d8c46e"
+info    = "#7fa8c9"
+success = "#91c98b"

@@ -1,0 +1,28 @@
+[meta]
+name = "Phosphor"
+
+[colors]
+background       = "#0a0f0b"
+background_dark  = "#050805"
+background_alt   = "#111a12"
+
+foreground       = "#8fbd91"
+foreground_muted = "#4f754f"
+
+red     = "#a85c5c"
+orange  = "#a8784c"
+yellow  = "#a8a65a"
+green   = "#7fbf73"
+cyan    = "#6da98c"
+blue    = "#648f78"
+purple  = "#806f88"
+magenta = "#986b7a"
+
+border    = "#29412b"
+selection = "#1b3a20"
+cursor    = "#b4e6a0"
+
+error   = "#b76565"
+warning = "#b5ad62"
+info    = "#6da98c"
+success = "#7fbf73"
