@@ -180,6 +180,46 @@ return {{
 
 print(f"generated {NVIM_DIR / 'palette.lua'}")
 
+# generate gtk3 theme
+
+# destination
+GTK3_DIR = Path.home() / ".config" / "gtk-3.0"
+GTK3_DIR.mkdir(parents=True, exist_ok=True)
+
+gtk3 = f"""\
+/* Automatically generated. Do not edit. */
+/* Source: ~/.config/theme/current/colors.toml */
+
+@define-color background {colors["background"]};
+@define-color background_dark {colors["background_dark"]};
+@define-color background_alt {colors["background_alt"]};
+
+@define-color foreground {colors["foreground"]};
+@define-color foreground_muted {colors["foreground_muted"]};
+
+@define-color red {colors["red"]};
+@define-color orange {colors["orange"]};
+@define-color yellow {colors["yellow"]};
+@define-color green {colors["green"]};
+@define-color cyan {colors["cyan"]};
+@define-color blue {colors["blue"]};
+@define-color purple {colors["purple"]};
+@define-color magenta {colors["magenta"]};
+
+@define-color border {colors["border"]};
+@define-color selection {colors["selection"]};
+@define-color cursor {colors["cursor"]};
+
+@define-color error {colors["error"]};
+@define-color warning {colors["warning"]};
+@define-color info {colors["info"]};
+@define-color success {colors["success"]};
+"""
+
+(GTK3_DIR / "theme.css").write_text(gtk3)
+
+print(f"generated {GTK3_DIR / 'theme.css'}")
+
 
 # generate site theme
 # this one is a bit silly

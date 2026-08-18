@@ -1,0 +1,169 @@
+@import url("theme.css");
+
+window,
+.background {
+    background-color: @background;
+    color: @foreground;
+}
+
+* {
+    color: @foreground;
+}
+
+entry,
+textview,
+spinbutton {
+    background-color: @background_dark;
+    color: @foreground;
+    border-color: @border;
+    caret-color: @cursor;
+}
+
+entry:focus,
+spinbutton:focus,
+textview:focus {
+    border-color: @cyan;
+}
+
+selection {
+    background-color: @selection;
+    color: @foreground;
+}
+
+.view:selected,
+iconview:selected,
+row:selected {
+    background-color: @selection;
+    color: @foreground;
+}
+
+button {
+    background-color: @background_alt;
+    color: @foreground;
+    border-color: @border;
+}
+
+button:hover {
+    background-color: @selection;
+    border-color: @cyan;
+}
+
+button:active,
+button:checked {
+    background-color: @selection;
+    border-color: @cyan;
+}
+
+button:disabled {
+    color: @foreground_muted;
+}
+
+popover,
+popover.background,
+menu,
+.menu {
+    background-color: @background_dark;
+    color: @foreground;
+    border-color: @border;
+}
+
+popover modelbutton:hover,
+menu menuitem:hover,
+.menu menuitem:hover {
+    background-color: @selection;
+    color: @foreground;
+}
+
+list,
+listview,
+treeview {
+    background-color: @background;
+    color: @foreground;
+}
+
+row:hover {
+    background-color: @background_alt;
+}
+
+row:selected {
+    background-color: @selection;
+}
+
+checkbutton:checked,
+radiobutton:checked {
+    color: @cyan;
+}
+
+switch {
+    background-color: @background_alt;
+    border-color: @border;
+}
+
+switch:checked {
+    background-color: @green;
+}
+
+switch:checked slider {
+    background-color: @background;
+}
+
+scale trough,
+progressbar trough {
+    background-color: @background_dark;
+}
+
+scale highlight,
+progressbar progress {
+    background-color: @cyan;
+}
+
+
+scrollbar trough {
+    background-color: @background_dark;
+}
+
+scrollbar slider {
+    background-color: @border;
+}
+
+scrollbar slider:hover {
+    background-color: @foreground_muted;
+}
+
+
+tooltip,
+tooltip.background {
+    background-color: @background_dark;
+    color: @foreground;
+    border-color: @border;
+}
+
+
+link {
+    color: @blue;
+}
+
+link:hover {
+    color: @cyan;
+}
+
+
+*:focus {
+    outline-color: @cyan;
+}
+
+.error {
+    color: @error;
+}
+
+.warning {
+    color: @warning;
+}
+
+.info {
+    color: @info;
+}
+
+.success {
+    color: @success;
+}

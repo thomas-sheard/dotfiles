@@ -12,6 +12,7 @@ tofi/.config/tofi/theme.conf
 waybar/.config/waybar/theme.css
 mako/.config/mako/colors
 nvim/.config/nvim/lua/core/theme/palette.lua
+gtk-3.0/.config/gtk-3.0/theme.css
 
 # other
 *.uuid
