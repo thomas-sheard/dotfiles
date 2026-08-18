@@ -1,0 +1,4 @@
+set $background #282c34
+set $foreground #abb2bf
+set $border #98c379
+set $indicator #d19a66

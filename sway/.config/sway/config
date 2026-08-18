@@ -43,10 +43,12 @@ gaps outer 0
 smart_gaps on
 smart_borders on
 
-# class                 border  bg      text    indicator child_border
-client.focused          #9CAF88 #282c34 #ABB2bf #e06c74   #9CAF88
-client.focused_inactive #9CAF88 #282c34 #ABB2bf #e06c74   #282c34
-client.unfocused        #282c34 #282c34 #ABB2bf #e06c74   #282c34
+include ./theme
+
+# class                 border      bg          text        indicator   child_border
+client.focused          $border     $background $foreground $indicator  $border
+client.focused_inactive $border     $background $foreground $indicator  $background
+client.unfocused        $background $background $foreground $indicator  $background
 #client.background #9CAF88
 
 bar {
