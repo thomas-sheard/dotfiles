@@ -1,0 +1,33 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+THEME_ROOT="${XDG_CONFIG_HOME:-$HOME/.config}/theme"
+
+if [[ $# -ne 1 ]]; then
+    echo "usage: theme <theme>"
+    exit 1
+fi
+
+THEME="$1"
+THEME_PATH="$THEME_ROOT/themes/$THEME"
+
+if [[ ! -d "$THEME_PATH" ]]; then
+    echo "theme not found: $THEME"
+    echo
+    echo "available themes:"
+    find "$THEME_ROOT/themes" -mindepth 1 -maxdepth 1 -type d \
+        -printf '  %f\n' | sort
+    exit 1
+fi
+
+if [[ ! -f "$THEME_PATH/colors.toml" ]]; then
+    echo "theme has no colors.toml: $THEME"
+    exit 1
+fi
+
+ln -sfn "themes/$THEME" "$THEME_ROOT/current"
+
+"$THEME_ROOT/generate"
+
+echo "theme: $THEME"

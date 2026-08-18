@@ -1,0 +1,55 @@
+#!/usr/bin/env python3
+
+# takes colors.toml and generates useful forms (lua, css, sh, etc) 
+# to be interpreted externally by all my stuff
+# literally just chewing up the theme and spitting it out 
+# in an understandable way for each program that needs it
+
+from pathlib import Path
+import tomllib
+
+# paths
+THEME_ROOT = Path.home() / ".config" / "theme"
+COLORS_FILE = THEME_ROOT / "current" / "colors.toml"
+WAYBAR_DIR = Path.home() / ".config" / "waybar"
+
+
+# read current theme
+with COLORS_FILE.open("rb") as f:
+    theme = tomllib.load(f)
+
+colors = theme["colors"]
+
+# generate waybar theme
+
+# destination exists
+WAYBAR_DIR.mkdir(parents=True, exist_ok=True)
+
+waybar = f"""\
+/* Automatically generated. Do not edit. */
+/* Source: ~/.config/theme/current/colors.toml */
+
+@define-color background {colors["background"]};
+@define-color foreground {colors["foreground"]};
+@define-color red {colors["red"]};
+@define-color red {colors["red"]};
+@define-color yellow {colors["yellow"]};
+@define-color cyan {colors["cyan"]};
+@define-color purple {colors["purple"]};
+@define-color green {colors["green"]};
+"""
+
+(WAYBAR_DIR / "theme.css").write_text(waybar)
+
+print(f"generated {WAYBAR_DIR / 'theme.css'}")
+
+# generate tofi theme
+
+# generate mako theme
+
+# generate foot theme
+
+# generate nvim theme
+
+# generate sway theme
+
