@@ -14,4 +14,5 @@ nvim/.config/nvim/lua/core/theme/palette.lua
 
 # other
 *.uuid
+nvim/.config/nvim/lazy-lock.json
 
