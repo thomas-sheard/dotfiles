@@ -135,7 +135,7 @@ sway = f"""\
 set $background {colors["background"]}
 set $foreground {colors["foreground"]}
 set $border {colors["green"]}
-set $indicator {colors["orange"]}
+set $indicator {colors["red"]}
 """
 
 (SWAY_DIR / "theme").write_text(sway)

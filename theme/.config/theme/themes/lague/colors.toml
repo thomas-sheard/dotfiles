@@ -1,0 +1,28 @@
+[meta]
+name = "Lague"
+
+[colors]
+background       = "#292d3e"
+background_dark  = "#1f2230"
+background_alt   = "#34384d"
+
+foreground       = "#c5c8d4"
+foreground_muted = "#676b7d"
+
+red     = "#f07178"
+orange  = "#f78c6c"
+yellow  = "#ffcb6b"
+green   = "#c3e88d"
+cyan    = "#84d4f2"
+blue    = "#82aaff"
+purple  = "#c792ea"
+magenta = "#f48fb1"
+
+border    = "#454a60"
+selection = "#3a4055"
+cursor    = "#c3e88d"
+
+error   = "#f07178"
+warning = "#ffcb6b"
+info    = "#8fa8c7"
+success = "#c3e88d"

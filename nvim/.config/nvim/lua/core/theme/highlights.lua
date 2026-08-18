@@ -143,6 +143,10 @@ return {
       fg = p.blue,
     },
 
+    Question = {
+      fg = p.cyan,
+    },
+
     LineNr = {
       fg = p.foreground_muted,
     },

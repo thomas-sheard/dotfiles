@@ -1,0 +1,28 @@
+[meta]
+name = "Raw"
+
+[colors]
+background       = "#000000"
+background_dark  = "#000000"
+background_alt   = "#202020"
+
+foreground       = "#ffffff"
+foreground_muted = "#808080"
+
+red     = "#ff0000"
+orange  = "#ff8000"
+yellow  = "#ffff00"
+green   = "#00ff00"
+cyan    = "#00ffff"
+blue    = "#0080ff"
+purple  = "#8000ff"
+magenta = "#ff00ff"
+
+border    = "#ffffff"
+selection = "#404040"
+cursor    = "#ffffff"
+
+error   = "#ff0000"
+warning = "#ffff00"
+info    = "#00ffff"
+success = "#00ff00"
