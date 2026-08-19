@@ -14,7 +14,7 @@ window#waybar {
   min-height: 0;
 }
 
-@import "font.css";
+@import url("font.css");
 /* font.css should be in ./ and contain:
 
 * {
@@ -28,7 +28,6 @@ window#waybar {
 }
 
 #workspaces button {
-  color: @yellow;
   background-color: @background;
   padding: 2px 4px 0px 4px;
   margin: 0;
@@ -37,15 +36,12 @@ window#waybar {
   min-width: 0;
 }
 
-#workspaces button.persistent {
-  color: @purple;
-}
-
-#workspaces button.active {
-  color: @purple;
+#workspaces button label {
+    color: @yellow;
 }
 
 #workspaces button:hover {
+  color: @yellow;
   background-color: @background;
   border: none;
   transition: none;

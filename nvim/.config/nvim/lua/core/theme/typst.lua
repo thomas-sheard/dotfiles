@@ -148,12 +148,12 @@ return {
 
     ["@markup.raw"] = {
         fg = p.green,
-        --bg = p.background_dark,
+        bg = p.background_dark,
     },
 
     ["@markup.raw.block"] = {
         fg = p.foreground,
-        --bg = p.background_dark,
+        bg = p.background_dark,
     },
 
     ["@label"] = {

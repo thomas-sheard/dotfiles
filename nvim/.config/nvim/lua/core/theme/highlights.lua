@@ -206,15 +206,15 @@ return {
     },
 
     Search = {
-        bg = p.background_alt,
+        bg = p.selection,
     },
 
     IncSearch = {
-        bg = p.background_alt,
+        bg = p.selection,
     },
 
     CurSearch = {
-        fg = p.background_alt,
+        fg = p.background,
         bg = p.yellow,
     },
 
