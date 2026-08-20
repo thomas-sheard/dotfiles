@@ -38,15 +38,15 @@ window#waybar {
 
 #workspaces button label {
     color: @yellow;
+    background-color: transparent;
 }
 
 #workspaces button:hover {
-  color: @yellow;
-  background-color: @background;
   border: none;
   transition: none;
   box-shadow: none;
   text-shadow: none;
+  background: transparent;
 }
 
 #clock {
