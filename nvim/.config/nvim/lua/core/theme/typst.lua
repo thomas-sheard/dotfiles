@@ -147,13 +147,13 @@ return {
     -- raw / code
 
     ["@markup.raw"] = {
-        fg = p.green,
-        bg = p.background_dark,
+        fg = p.purple,
+        bg = p.background,
     },
 
     ["@markup.raw.block"] = {
-        fg = p.foreground,
-        bg = p.background_dark,
+        fg = p.purple,
+        bg = p.background,
     },
 
     ["@label"] = {
