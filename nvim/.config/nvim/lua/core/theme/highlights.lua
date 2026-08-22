@@ -90,6 +90,10 @@ return {
         fg = p.warning,
     },
 
+    DiagnosticOk = {
+      fg = p.success,
+    },
+
     DiagnosticError = {
         fg = p.error,
     },
@@ -103,7 +107,7 @@ return {
     },
 
     DiagnosticHint = {
-        fg = p.success,
+        fg = p.info,
     },
 
     DiagnosticVirtualTextError = {
@@ -119,7 +123,7 @@ return {
     },
 
     DiagnosticVirtualTextHint = {
-        fg = p.success,
+        fg = p.info,
     },
 
     DiagnosticUnderlineError = {

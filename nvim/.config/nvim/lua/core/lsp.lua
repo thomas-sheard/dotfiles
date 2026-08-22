@@ -41,7 +41,7 @@ vim.api.nvim_create_autocmd("FileType", {
 
 vim.lsp.config("tinymist", {
   settings = {
-    semanticTokens = "disable",
+    --semanticTokens = "disable",
   },
 })
 vim.lsp.enable("tinymist")

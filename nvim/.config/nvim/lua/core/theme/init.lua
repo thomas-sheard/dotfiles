@@ -24,6 +24,9 @@ local treesitter = require("core.theme.treesitter")
 local typst = require("core.theme.typst")
 local rust = require("core.theme.rust")
 
+-- other
+local mason = require("core.theme.mason")
+
 local M = {}
 
 function M.setup()
@@ -52,6 +55,11 @@ function M.setup()
     end
 
     for group, opts in pairs(rust) do
+        vim.api.nvim_set_hl(0, group, opts)
+    end
+
+
+    for group, opts in pairs(mason) do
         vim.api.nvim_set_hl(0, group, opts)
     end
 end
