@@ -17,6 +17,7 @@ return {
     },
 
     Visual = {
+      nocombine = true,
         bg = p.selection,
     },
 
@@ -213,9 +214,14 @@ return {
         bg = p.selection,
     },
 
+    -- i would prefer to have the commented fields
+    -- but it doesnt work when the searched text is then highlighted in Visual mode
+    -- this is the best compromise i found
     CurSearch = {
-        fg = p.background,
-        bg = p.yellow,
+      --fg = p.background,
+      --bg = p.yellow,
+        fg = p.yellow,
+        bg = p.selection,
     },
 
     MatchParen = {

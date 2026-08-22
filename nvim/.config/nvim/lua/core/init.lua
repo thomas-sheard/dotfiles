@@ -2,6 +2,7 @@ vim.g.mapleader = " "
 
 require("core.keymaps")
 require("core.options")
+--require("core.cmd")
 
 require("core.lazy")
 vim.cmd.colorscheme("system")

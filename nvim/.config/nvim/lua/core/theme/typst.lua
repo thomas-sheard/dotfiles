@@ -8,6 +8,11 @@ return {
         italic = true,
     },
 
+    ["typstMarkupTodo"] = {
+        fg = p.yellow,
+        italic = true,
+    },
+
     ["@punctuation.special"] = {
         fg = p.red,
     },
@@ -71,7 +76,6 @@ return {
     },
 
     -- headings
-    -- Cyan is deliberately concentrated here.
 
     ["@markup.heading"] = {
         fg = p.cyan,
@@ -126,7 +130,6 @@ return {
     },
 
     -- links / references
-    -- Keep these blue rather than spending cyan here.
 
     ["@markup.link"] = {
         fg = p.blue,
