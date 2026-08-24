@@ -88,8 +88,8 @@ typwrite() {
   # almost always main.typ but generality doesn't hurt
   FILE=`find . -maxdepth 1 -name "*.typ"`
   NAME=${FILE%.*}
-  typst watch "$NAME.typ" output.pdf &
-  zathura "$NAME.pdf" 
+  zathura output.pdf & #sleep 0.2; swaymsg move left
+  typst watch "$NAME.typ" output.pdf
 }
 
 # latex functions
