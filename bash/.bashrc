@@ -76,20 +76,19 @@ reRun() {
 tcompile() {
   FILE=`find . -maxdepth 1 -name "*.typ"`
   NAME=${FILE%.*}
-  typst compile "$NAME.typ"
-  zathur
+  typst compile "$NAME.typ" output.pdf
+  #zathura output.pdf &
 }
 
-# typst functions
 typlate() {
   echo Undefined
 }
 
 typwrite() {
-  # almost always main.typ but. generality doesn't hurt
+  # almost always main.typ but generality doesn't hurt
   FILE=`find . -maxdepth 1 -name "*.typ"`
   NAME=${FILE%.*}
-  typst watch "$NAME.typ" &
+  typst watch "$NAME.typ" output.pdf &
   zathura "$NAME.pdf" 
 }
 
