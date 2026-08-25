@@ -81,7 +81,7 @@ tcompile() {
 }
 
 typlate() {
-  echo Undefined
+  cp ~/Desktop/programming/typst/templates/assignment/main.typ .
 }
 
 typwrite() {
