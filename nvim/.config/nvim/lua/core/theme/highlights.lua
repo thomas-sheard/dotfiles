@@ -17,7 +17,7 @@ return {
     },
 
     Visual = {
-      nocombine = true,
+      --nocombine = true,
         bg = p.selection,
     },
 
