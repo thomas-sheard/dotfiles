@@ -220,6 +220,67 @@ gtk3 = f"""\
 
 print(f"generated {GTK3_DIR / 'theme.css'}")
 
+# generate zathura theme
+
+# destination
+ZATHURA_DIR = Path.home() / ".config" / "zathura"
+ZATHURA_DIR.mkdir(parents=True, exist_ok=True)
+
+# adapted from dracula theming:
+# https://github.com/dracula/zathura
+
+zathura = f"""\
+set window-title-basename "true"
+set selection-clipboard "clipboard"
+
+set notification-error-bg       "{colors["error"]}"
+set notification-error-fg       "{colors["foreground"]}"
+set notification-warning-bg     "{colors["warning"]}"
+set notification-warning-fg     "{colors["selection"]}"
+set notification-bg             "{colors["background"]}"
+set notification-fg             "{colors["foreground"]}"
+
+set completion-bg               "{colors["background"]}"
+set completion-fg               "{colors["foreground_muted"]}"
+set completion-group-bg         "{colors["background"]}"
+set completion-group-fg         "{colors["foreground_muted"]}"
+set completion-highlight-bg     "{colors["selection"]}"
+set completion-highlight-fg     "{colors["foreground"]}"
+
+set index-bg                    "{colors["background"]}"
+set index-fg                    "{colors["foreground"]}"
+set index-active-bg             "{colors["blue"]}"
+set index-active-fg             "{colors["foreground"]}"
+
+set inputbar-bg                 "{colors["background"]}"
+set inputbar-fg                 "{colors["foreground"]}"
+set statusbar-bg                "{colors["background"]}"
+set statusbar-fg                "{colors["foreground"]}"
+
+set highlight-color             "{colors["cyan"]}"
+set highlight-active-color      "{colors["yellow"]}"
+
+set default-bg                  "{colors["background"]}"
+set default-fg                  "{colors["foreground"]}"
+
+set render-loading              true
+set render-loading-fg           "{colors["background"]}"
+set render-loading-bg           "{colors["foreground"]}"
+
+# recolor mode settings
+
+set recolor-lightcolor          "{colors["background"]}"
+set recolor-darkcolor           "{colors["foreground"]}"
+
+# startup options
+set adjust-open width
+set recolor true
+"""
+
+(ZATHURA_DIR / "zathurarc").write_text(zathura)
+
+print(f"generated {ZATHURA_DIR / 'zathurarc'}")
+
 
 # generate site theme
 # this one is a bit silly
