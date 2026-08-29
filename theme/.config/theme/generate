@@ -285,17 +285,22 @@ print(f"generated {ZATHURA_DIR / 'zathurarc'}")
 # generate site theme
 # this one is a bit silly
 # but a good way of seeing new themes!
-site_theme = False
+site_theme = True
 
 if site_theme:
 
     WEBSITE_DIR = Path.home() / "Desktop" / "programming" / "html" / "website" / "static" / "styling"
     WEBSITE_DIR.mkdir(parents=True, exist_ok=True)
 
+            #--link: #6453A4;
+
+    # dark theme
+    #if int(("0x" + foot_color("background")).encode('utf-8').hex()) < 0x888888:
     website = f"""\
     :root {{
         --background: {colors["background"]};
         --foreground: {colors["foreground"]};
+        --link: {colors["foreground_muted"]};
         --red: {colors["red"]};
         --orange: {colors["orange"]};
         --yellow: {colors["yellow"]};
@@ -306,6 +311,27 @@ if site_theme:
         --magenta: {colors["magenta"]};
     }}
     """
+        # failed experiment: would require adding more veriables to represent more specific contexts
+        # would be cool, but realistically not worth it for a silly theme switcher
+        # the website is very hevily built around a dark theme for a reason. leaving it be.
+#    else:
+#        # light theme
+#        website = f"""\
+#        :root {{
+#            --background: {colors["background"]}
+#            --content-background: {colors["background"]};
+#            --text-color: {colors["foreground"]};
+#            --link: {colors["foreground_muted"]};
+#            --red: {colors["red"]};
+#            --orange: {colors["orange"]};
+#            --yellow: {colors["yellow"]};
+#            --green: {colors["green"]};
+#            --cyan: {colors["cyan"]};
+#            --blue: {colors["blue"]};
+#            --purple: {colors["purple"]};
+#            --magenta: {colors["magenta"]};
+#        }}
+#        """
 
     (WEBSITE_DIR / "theme.css").write_text(website)
 
