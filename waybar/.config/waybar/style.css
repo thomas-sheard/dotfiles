@@ -55,7 +55,7 @@ window#waybar {
 
 #mpris {
   padding-right: 15px;
-  color: @red;
+  color: @cyan;
 }
 
 #custom-media {
@@ -75,7 +75,7 @@ window#waybar {
   font-family: "Icons";
   font-size: 13pt;
   */
-  color: @cyan;
+  color: @blue;
   padding: 0;
   margin-top: -1px;
   margin-bottom: -1px;
@@ -96,7 +96,7 @@ window#waybar {
   font-size: 13pt;
   */
   margin-left: 10px;
-  color: @magenta;
+  color: @purple;
   padding: 0;
   margin-top: -1px;
   margin-bottom: -1px;
