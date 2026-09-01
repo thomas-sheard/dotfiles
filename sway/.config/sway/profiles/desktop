@@ -22,7 +22,7 @@ input type:keyboard {
 
 input type:pointer {
   accel_profile flat
-  pointer_accel -0.4
+  pointer_accel -0.1
   scroll_factor 0.8
 }
 
@@ -60,5 +60,3 @@ bindsym --locked XF86AudioPlay exec playerctl --player=playerctld play-pause
 
 # bindsysm nosym????? help!!!
 
-bindsym Mod4+greater exec swaymsg input type:pointer pointer_accel -- -0.4
-bindsym Mod4+less exec swaymsg input type:pointer pointer_accel -- -0.9
