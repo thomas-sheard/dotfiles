@@ -60,4 +60,3 @@ bindsym --locked XF86AudioPlay exec playerctl --player=playerctld play-pause
 
 # bindsysm nosym????? help!!!
 
-
