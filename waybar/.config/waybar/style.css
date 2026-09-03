@@ -55,7 +55,7 @@ window#waybar {
 
 #mpris {
   padding-right: 15px;
-  color: @cyan;
+  color: @foreground;
 }
 
 #custom-media {
