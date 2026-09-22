@@ -38,30 +38,30 @@ function M.setup()
 
     vim.g.colors_name = "system"
 
---    for group, opts in pairs(highlights) do
---        vim.api.nvim_set_hl(0, group, opts)
---    end
+    for group, opts in pairs(highlights) do
+        vim.api.nvim_set_hl(0, group, opts)
+    end
 
---    for group, opts in pairs(treesitter) do
---        vim.api.nvim_set_hl(0, group, opts)
---    end
---
--- --   for group, opts in pairs(lualine) do
--- --       vim.api.nvim_set_hl(0, group, opts)
--- --   end
---
---    for group, opts in pairs(typst) do
---        vim.api.nvim_set_hl(0, group, opts)
---    end
---
---    for group, opts in pairs(rust) do
---        vim.api.nvim_set_hl(0, group, opts)
---    end
---
---
---    for group, opts in pairs(mason) do
---        vim.api.nvim_set_hl(0, group, opts)
---    end
+    for group, opts in pairs(treesitter) do
+        vim.api.nvim_set_hl(0, group, opts)
+    end
+
+ --   for group, opts in pairs(lualine) do
+ --       vim.api.nvim_set_hl(0, group, opts)
+ --   end
+
+    for group, opts in pairs(typst) do
+        vim.api.nvim_set_hl(0, group, opts)
+    end
+
+    for group, opts in pairs(rust) do
+        vim.api.nvim_set_hl(0, group, opts)
+    end
+
+
+    for group, opts in pairs(mason) do
+        vim.api.nvim_set_hl(0, group, opts)
+    end
 end
 
 return M
