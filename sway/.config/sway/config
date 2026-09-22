@@ -58,7 +58,7 @@ bar {
 
 # devices
 
-focus_follows_mouse always
+focus_follows_mouse no
 
 for_window [shell="xwayland"] title_format "[XWayland] %title"
 
