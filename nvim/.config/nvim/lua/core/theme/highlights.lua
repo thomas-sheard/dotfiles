@@ -61,7 +61,7 @@ return {
 
     -- semantic entities
     Type = {
-        fg = p.magenta,
+        fg = p.yellow,
     },
 
     Statement = {
