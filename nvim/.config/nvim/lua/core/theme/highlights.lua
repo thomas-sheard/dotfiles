@@ -1,6 +1,7 @@
 local p = require("core.theme.palette")
 
 return {
+
     Normal = {
         fg = p.foreground,
         bg = p.background,
@@ -66,10 +67,6 @@ return {
 
     Statement = {
         fg = p.purple,
-    },
-
-    PreProc = {
-      fg = p.magenta,
     },
 
     -- quiet syntax
@@ -301,5 +298,9 @@ return {
 
     CmpItemKindMethod = {
         fg = p.blue,
+    },
+
+    PreProc = {
+      fg = p.blue
     },
 }
