@@ -1,2 +1,3 @@
 vim.g.mapleader = " "
-require("core.lazy")
+require("temp.lazy")
+--require("temp.theme")

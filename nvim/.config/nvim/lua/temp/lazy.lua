@@ -19,22 +19,11 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
 
-  -- aesthetics
-
---  {
---    'navarasu/onedark.nvim',
---    priority = 1000,
---    config = function()
---      vim.cmd.colorscheme 'onedark'
---    end,
---  },
-
-  {
-    'shaunsingh/nord.nvim',
-    priority = 1000,
-    config = function()
-      vim.cmd.colorscheme 'nord'
-    end,
-  },
-
-  })
+	"code-2026-theme/nvim",
+	name = "code-2026",
+	lazy = false,
+	priority = 1000,
+	config = function()
+		require("temp.theme")
+	end,
+})
