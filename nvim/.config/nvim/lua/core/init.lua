@@ -5,7 +5,7 @@ require("core.options")
 --require("core.cmd")
 
 require("core.lazy")
-vim.cmd.colorscheme("system")
+require("core.theme")
 
 require("core.treesitter")
 require("core.lsp")
@@ -20,7 +20,6 @@ require("core.tabout")
 
 require("core.lualine")
 --require("core.typst")
-
 
 --[[
 

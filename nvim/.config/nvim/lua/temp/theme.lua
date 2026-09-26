@@ -1,45 +1,46 @@
 local p = require("temp.palette")
 
-require('code-2026').setup({
-  background = 'dark',
-  transparent = false,
-  terminal_colors = true,
-  dim_inactive = false,
+require('base16-colorscheme').setup({
+	-- background
+	base00 = p.background,
 
-  styles = {
-    comments = { italic = true },
-    keywords = {},
-    conditionals = {},
-    functions = {},
-    methods = {},
-    variables = {},
-    builtins = { italic = true },
-    parameters = {},
-    properties = {},
-    types = {},
-    strings = {},
-    numbers = {},
-    booleans = {},
-    constants = {},
-    operators = {},
-    namespaces = {},
-    macros = {},
-    attributes = {},
-    tags = {},
-    headings = { bold = true },
+	-- line hl
+	base01 = p.background_alt,
 
-    floats = 'solid',       -- 'solid' | 'transparent' | 'auto'
-  },
+	base02 = p.green,
 
-  palette = {
-	  bg = p.background,
-  },
+    -- comments
+	base03 = p.foreground_muted,
 
-  on_colors = function(colors) end,                    -- programmatic color overrides
-  highlights = {},                                     -- static highlight overrides
-  on_highlights = function(highlights, colors) end,    -- programmatic highlight overrides
-  plugins = {},                                        -- e.g. { telescope = false }
+	base04 = p.cyan,
+
+	-- plain text
+	base05 = p.foreground,
+
+	base06 = p.cyan,
+	base07 = p.cyan,
+
+	-- macros
+	base08 = p.blue,
+
+	-- numbers
+	base09 = p.orange,
+
+    -- types, classes
+	base0A = p.yellow,
+
+    -- strings, text
+	base0B = p.green,
+
+    -- special
+	base0C = p.cyan,
+
+    -- functions, methods
+	base0D = p.blue,
+
+    -- keywords, operators
+	base0E = p.purple,
+
+    -- delimiters?
+	base0F = p.green,
 })
-
-vim.cmd.colorscheme("dark-2026")
-

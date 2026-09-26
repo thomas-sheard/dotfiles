@@ -19,11 +19,8 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
 
-	"code-2026-theme/nvim",
-	name = "code-2026",
-	lazy = false,
-	priority = 1000,
-	config = function()
-		require("temp.theme")
-	end,
+  {
+    'RRethy/base16-nvim'
+  }
+
 })
