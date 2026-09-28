@@ -32,7 +32,7 @@ return {
   ["@lsp.mod.deprecated"] = "DiagnosticDeprecated",
 
   -- per-language special cases: just more rows
-  ["@punctuation.special.rust"] = "special", -- confirm the capture with :Inspect
+  ["rustSigil"] = "special", -- confirm the capture with :Inspect
 
   -- LSP semantic tokens: only ones that clobber treesitter
   ["@lsp.type.comment"] = "none",
