@@ -37,8 +37,7 @@ Currently, I want syntax highlighting to maintain:
 
 # Todos
 
-- redefine Search groups in `ui.lua`; I figured these out in a previous iteration just need to dig for them
 - check Typst; enforce defined groups if necessary
-- check light themes
-- isolate bracket pairing highlighting
-- fix interpolated magenta for nord
+    - titles / headings are blue. not bad; blends in with code a bit. belongs to `@markup.heading`, links to `Title`
+    - citations underlined, looks bad. belongs to `@markup.link.typst`, links to `Underlined`
+    - `@markup.link.label` is the same

@@ -2,17 +2,16 @@ local p = require("core.theme.palette")
 local b = require("core.theme.util").blend
 
 return {
-  Normal       = { fg = p.foreground, bg = p.background },
-  NormalFloat  = { fg = p.foreground, bg = p.background_dark },
-  FloatBorder  = { fg = p.border,     bg = p.background_dark },
+  Normal = { fg = p.foreground, bg = p.background },
+  NormalFloat = { fg = p.foreground, bg = p.background_dark },
+  FloatBorder = { fg = p.border,     bg = p.background_dark },
   WinSeparator = { fg = p.border },
-  CursorLine   = { bg = p.background_alt },
-  Visual       = { bg = p.selection },
-  Cursor       = { fg = p.background, bg = p.cursor },
-  Pmenu        = { fg = p.foreground, bg = p.background_alt },
-  PmenuSel     = { bg = p.selection },
-  LineNr       = "muted",
-  Search       = { fg = p.background, bg = p.yellow },
+  CursorLine = { bg = p.background_alt },
+  Visual = { bg = p.selection },
+  Cursor = { fg = p.background, bg = p.cursor },
+  Pmenu = { fg = p.foreground, bg = p.background_alt },
+  PmenuSel = { bg = p.selection },
+  LineNr = "muted",
 
   DiagnosticError = "error", DiagnosticWarn = "warn",
   DiagnosticInfo  = "info",  DiagnosticHint = "muted", DiagnosticOk = "ok",
@@ -27,12 +26,15 @@ return {
   Directory = "func",
 
   -- search
-  IncSearch = { fg = p.background, bg = p.orange },
+  Search = { fg = p.foreground, bg = p.selection },
+  IncSearch = { fg = p.yellow, bg = p.selection },
   CurSearch = "IncSearch",
-  MatchParen = { "warn", bold = true },
   QuickFixLine = "Visual",
 
-  -- quiet chrome
+  -- paren match colours
+  MatchParen = { fg = p.foreground, bg = p.selection },
+
+  -- quiet 
   NonText = "muted", EndOfBuffer = "NonText", Whitespace = "NonText", Conceal = "muted",
   SignColumn = { fg = p.foreground_muted },
   FoldColumn = "muted",

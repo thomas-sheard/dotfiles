@@ -6,6 +6,7 @@ return {
   muted     = { fg = p.foreground_muted },
   comment   = { fg = p.foreground_muted, italic = true },
 
+  -- see readme for ethos
   func      = { fg = p.blue },     -- things that do things
   keyword   = { fg = p.purple },   -- structure, flow control
   value     = { fg = p.orange },   -- concrete values
