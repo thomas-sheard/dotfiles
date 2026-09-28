@@ -29,18 +29,16 @@ require("lazy").setup({
 --    end,
 --  },
 
-  {
-    'shaunsingh/nord.nvim',
-    priority = 1000,
-    config = function()
-      vim.cmd.colorscheme 'nord'
-    end,
-  },
-
--- theming
+--  {
+--    'shaunsingh/nord.nvim',
+--    priority = 1000,
+--    config = function()
+--      vim.cmd.colorscheme 'nord'
+--    end,
+--  },
 
 
-  'nvim-tree/nvim-web-devicons',
+  {'nvim-tree/nvim-web-devicons'},
 
   -- set lualine as statusline
 

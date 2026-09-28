@@ -2,10 +2,14 @@ vim.g.mapleader = " "
 
 require("core.keymaps")
 require("core.options")
---require("core.cmd")
+require("core.cmd")
 
 require("core.lazy")
---require("core.theme")
+
+
+-- theming
+require("core.theme")
+vim.cmd.colorscheme("system")
 
 require("core.treesitter")
 require("core.lsp")
@@ -19,11 +23,11 @@ require("core.autopairs")
 require("core.tabout")
 
 require("core.lualine")
---require("core.typst")
+--require("typst")
 
 --[[
 
-require("core/telescope")
+require("telescope")
 set keybinds to homogenised tab completion for both luasnip and cmp
 
 install autopairs and config

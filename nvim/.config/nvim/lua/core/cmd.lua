@@ -4,3 +4,5 @@ vim.api.nvim_create_autocmd("ModeChanged", {
     vim.cmd("nohlsearch")
   end,
 })
+
+vim.api.nvim_create_user_command("ThemeAudit", require("core.theme.audit").run, {})
