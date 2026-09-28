@@ -144,7 +144,7 @@ print(f"generated {SWAY_DIR / 'theme'}")
 
 # generate nvim theme
 
-NVIM_DIR = Path.home() / ".config" / "nvim" / "lua" / "core" #/ "theme"
+NVIM_DIR = Path.home() / ".config" / "nvim" / "lua" / "core" / "theme"
 NVIM_DIR.mkdir(parents=True, exist_ok=True)
 
 nvim = f"""\
