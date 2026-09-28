@@ -5,7 +5,7 @@ require("core.options")
 --require("core.cmd")
 
 require("core.lazy")
-require("core.theme")
+--require("core.theme")
 
 require("core.treesitter")
 require("core.lsp")

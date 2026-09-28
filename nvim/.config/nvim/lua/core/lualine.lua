@@ -2,7 +2,7 @@
 
 require("lualine").setup({
     options = {
-        theme = 'base16',
+        theme = 'nord',
         icons_enabled = false,
         component_separators = '|',
         section_separators = '',

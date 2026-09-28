@@ -29,30 +29,15 @@ require("lazy").setup({
 --    end,
 --  },
 
---  {
---    'shaunsingh/nord.nvim',
---    priority = 1000,
---    config = function()
---      vim.cmd.colorscheme 'nord'
---    end,
---  },
+  {
+    'shaunsingh/nord.nvim',
+    priority = 1000,
+    config = function()
+      vim.cmd.colorscheme 'nord'
+    end,
+  },
 
-  -- theming
-  -- code-2026 exposes a group-overwritable theme called dark-2026
-
---  {
---	  "code-2026-theme/nvim",
---	  lazy = false,
---	  priority = 1000,
---	  config = function()
---		  require("core.theme")
---	  end,
---  },
-
-
-	{
-		'RRethy/base16-nvim'
-	},
+-- theming
 
 
   'nvim-tree/nvim-web-devicons',
