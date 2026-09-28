@@ -1,112 +1,47 @@
 local p = require("core.palette")
 
-require('code-2026').setup({
-  styles = {
-    comments = { italic = true },
-    keywords = {},
-    conditionals = {},
-    functions = {},
-    methods = {},
-    variables = {},
-    builtins = { italic = false },
-    parameters = {},
-    properties = {},
-    types = {},
-    strings = {},
-    numbers = {},
-    booleans = {},
-    constants = {},
-    operators = {},
-    namespaces = {},
-    macros = {},
-    attributes = {},
-    tags = {},
-    headings = { bold = true },
+require('base16-colorscheme').setup({
+	-- background
+	base00 = p.background,
 
-    floats = 'solid',       -- 'solid' | 'transparent' | 'auto'
-  },
+	-- line hl
+	base01 = p.background,
 
-  palette = {
-    -- surfaces
-    bg        = p.background,
-    bg_alt    = p.background_alt,
-    bg_menu   = p.background,
-    bg_line   = p.background,
-    bg_widget = p.background_dark,
-    bg_select = p.selection,
-    bg_match  = p.selection,
+	base02 = p.background_alt,
 
-    border     = p.border,
-    border_alt = p.border,
+    -- comments
+	base03 = p.foreground_muted,
 
-    -- text
-    fg       = p.foreground,
-    fg_alt   = p.foreground,
-    fg_dim   = p.foreground_muted,
-    fg_muted = p.foreground_muted,
-    white    = p.foreground,
+    -- line numbers
+	base04 = p.foreground_muted,
 
-    -- accents
-    accent     = p.cyan,
-    accent_dim = p.foreground_muted,
-    accent_alt = p.magenta,
+	-- plain text
+	base05 = p.foreground,
 
-    -- syntax
-    comment  = p.foreground_muted,
-    variable = p.foreground,
+	base06 = p.cyan,
+	base07 = p.cyan,
 
-    -- green: text / strings
-    string = p.green,
-    regex  = p.green,
+	-- macros / variables (?)
+	base08 = p.blue,
 
-    -- orange: concrete values
-    number   = p.orange,
-    constant = p.orange,
-    member   = p.foreground,
+	-- numbers
+	base09 = p.orange,
 
-    -- purple: language structure / flow
-    keyword = p.purple,
-    module  = p.purple,
+    -- types, classes
+	base0A = p.yellow,
 
-    -- blue: things that do things
-    func  = p.blue,
-    macro = p.blue,
+    -- strings, text
+	base0B = p.green,
 
-    -- yellow: information / things to notice
-    type = p.yellow,
-    tag  = p.yellow,
+    -- special
+	base0C = p.cyan,
 
-    -- cyan: subtle distinctions / operators / contextual things
-    operator = p.cyan,
-    attr     = p.cyan,
+    -- functions, methods
+	base0D = p.blue,
 
-    -- magenta: special cases
-    annotation = p.magenta,
-    param      = p.foreground,
-    preproc    = p.foreground_muted,
+    -- keywords, operators
+	base0E = p.purple,
 
-    -- diagnostics
-    err   = p.red,
-    warn  = p.yellow,
-    info  = p.blue,
-    hint  = p.cyan,
-    ok    = p.green,
-    debug = p.foreground_muted,
-
-    -- diff
-    diff_add    = p.green,
-    diff_add_fg = p.background,
-
-    diff_del    = p.red,
-    diff_del_fg = p.background,
-
-    diff_chg    = p.yellow,
-    diff_chg_fg = p.background,
-
-    diff_text = p.foreground,
-
-  },
+    -- delimiters?
+	base0F = p.green,
 })
-
--- for some reason doesn't actually expose 'code-2026'? use dark-2026 instead
-vim.cmd.colorscheme('dark-2026')

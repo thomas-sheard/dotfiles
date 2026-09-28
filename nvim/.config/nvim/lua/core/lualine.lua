@@ -2,7 +2,7 @@
 
 require("lualine").setup({
     options = {
-        theme = 'code-2026',
+        theme = 'base16',
         icons_enabled = false,
         component_separators = '|',
         section_separators = '',

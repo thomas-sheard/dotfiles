@@ -40,14 +40,19 @@ require("lazy").setup({
   -- theming
   -- code-2026 exposes a group-overwritable theme called dark-2026
 
-  {
-	  "code-2026-theme/nvim",
-	  lazy = false,
-	  priority = 1000,
-	  config = function()
-		  require("core.theme")
-	  end,
-  },
+--  {
+--	  "code-2026-theme/nvim",
+--	  lazy = false,
+--	  priority = 1000,
+--	  config = function()
+--		  require("core.theme")
+--	  end,
+--  },
+
+
+	{
+		'RRethy/base16-nvim'
+	},
 
 
   'nvim-tree/nvim-web-devicons',
