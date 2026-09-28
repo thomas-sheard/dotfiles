@@ -17,29 +17,28 @@ The rest of the files are machinery to then apply and validate the theme.
 
 Currently, I want syntax highlighting to maintain:
 
-blue
-: things that do things; functions, methods, macros
+**Blue:** things that do things; functions, methods, macros
 
-purple
-: language structure, flow control
+**Purple:** language structure, flow control
 
-orange
-: concrete values
+**Orange:** concrete values
 
-green
-: strings/text
+**Green:** strings/text
 
-cyan
-: subtle visual distinction where needed (operators), rare contextual/builtin things
+**Cyan:** subtle visual distinction where needed (operators), rare contextual/builtin things
 
-yellow
-: information, things you should pay attention to (types, warnings)
+**Yellow:** information, things you should pay attention to (types, warnings)
 
-red
-: errors
+**Red:** errors
 
-magenta
-: special cases (rust sigils)
+**Magenta:** special cases (currently only rust sigils)
 
-cleared
-: variables, names, punctuation. things that are operated on by everything else
+**Cleared:** variables, names, punctuation. things that are operated on by everything else
+
+# Todos
+
+- redefine Search groups in `ui.lua`; I figured these out in a previous iteration just need to dig for them
+- check Typst; enforce defined groups if necessary
+- check light themes
+- isolate bracket pairing highlighting
+- fix interpolated magenta for nord
