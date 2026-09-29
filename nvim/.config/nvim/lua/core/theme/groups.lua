@@ -23,6 +23,12 @@ return {
   ["@comment.warning"]  = "warn",
   ["@comment.note"]     = "info",
 
+  ["@lsp.type.macro"] = "Macro",
+  --["@keyword.operator"] = "keyword", -- attempt at fixing 'as'
+
+  ["@type"] = "Type",
+  --["@lsp.type"] = "Type", -- @type.builtin
+
   -- groups.lua
   ["@variable"]           = "text",
   ["@markup.heading"]     = "Title",

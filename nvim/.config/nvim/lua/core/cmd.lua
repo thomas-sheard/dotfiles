@@ -5,4 +5,8 @@ vim.api.nvim_create_autocmd("ModeChanged", {
   end,
 })
 
+vim.api.nvim_create_autocmd("FileType", {
+  callback = function(a) pcall(vim.treesitter.start, a.buf) end,
+})
+
 vim.api.nvim_create_user_command("ThemeAudit", require("core.theme.audit").run, {})
