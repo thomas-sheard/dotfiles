@@ -31,8 +31,8 @@ input type:pointer {
 for_window [app_id="vesktop"] move container to workspace 0
 
 # games get sent to an isolated workspace that doesn't interfere with anything
-assign [class="^steam_app_"] "isolated"
-assign [instance="^wine_"] "isolated"
+#assign [class="^steam_app_"] "isolated"
+#assign [instance="^wine_"] "isolated"
 
 # keybinds (currently for the iqunix)
 # via doesn't actually change the keysym sent to the machine. which is.. annoying. but we can sort of catchall binds for multiple boards by assuming any overlap in keysyms will be sensible, and that more proprietary layouts won't overlap at all
