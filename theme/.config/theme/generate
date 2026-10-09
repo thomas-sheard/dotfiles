@@ -19,6 +19,13 @@ with COLORS_FILE.open("rb") as f:
 
 colors = theme["colors"]
 
+# badly named. just strips leading hash from hex
+def foot_color(name):
+    return colors[name].lstrip("#")
+
+# boolean for light themes
+is_light = False # not(int(("0x" + foot_color("background")).encode('utf-8').hex()) < 888888)
+
 # generate waybar theme
 
 # destination
@@ -50,10 +57,19 @@ print(f"generated {WAYBAR_DIR / 'theme.css'}")
 TOFI_DIR = Path.home() / ".config" / "tofi"
 TOFI_DIR.mkdir(parents=True, exist_ok=True)
 
-tofi = f"""\
-text-color = {colors["foreground"]}
-selection-color = {colors["green"]}
-"""
+if is_light:
+    tofi = f"""\
+    text-color = {colors["foreground"]}
+    selection-color = {colors["green"]}
+    background-color = {colors["background"]}
+    light
+    """
+else:
+    tofi = f"""\
+    text-color = {colors["foreground"]}
+    selection-color = {colors["green"]}
+    dark
+    """
 
 (TOFI_DIR / "theme.conf").write_text(tofi)
 
@@ -88,8 +104,6 @@ print(f"generated {MAKO_DIR / 'colors'}")
 FOOT_DIR = Path.home() / ".config" / "foot"
 FOOT_DIR.mkdir(parents=True, exist_ok=True)
 
-def foot_color(name):
-    return colors[name].lstrip("#")
 
 foot = f"""\
 [colors-dark]
