@@ -82,7 +82,7 @@ tcompile() {
 }
 
 typlate() {
-  cp ~/Desktop/programming/typst/templates/assignment/main.typ .
+  cp -r ~/Desktop/programming/typst/templates/assignment/* .
 }
 
 typwrite() {
