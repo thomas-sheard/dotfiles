@@ -1,0 +1,5 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{k}{\PYGZbs{}definecolor}\PYG{n+nb}{\PYGZob{}}red\PYG{n+nb}{\PYGZcb{}}\PYG{n+nb}{\PYGZob{}}rgb\PYG{n+nb}{\PYGZcb{}}\PYG{n+nb}{\PYGZob{}}1, 0.2, 0.2\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}definecolor}\PYG{n+nb}{\PYGZob{}}green\PYG{n+nb}{\PYGZcb{}}\PYG{n+nb}{\PYGZob{}}rgb\PYG{n+nb}{\PYGZcb{}}\PYG{n+nb}{\PYGZob{}}0.2, 0.7, 0.2\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}definecolor}\PYG{n+nb}{\PYGZob{}}blue\PYG{n+nb}{\PYGZcb{}}\PYG{n+nb}{\PYGZob{}}rgb\PYG{n+nb}{\PYGZcb{}}\PYG{n+nb}{\PYGZob{}}0.2, 0.2, 1\PYG{n+nb}{\PYGZcb{}}
+\end{MintedVerbatim}

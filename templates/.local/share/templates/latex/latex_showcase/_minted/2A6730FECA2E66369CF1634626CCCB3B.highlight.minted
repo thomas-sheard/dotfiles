@@ -1,0 +1,26 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{k}{\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}figure\PYG{n+nb}{\PYGZcb{}}[H] \PYG{c}{\PYGZpc{} makes a box on the page}
+    \PYG{k}{\PYGZbs{}centering} \PYG{c}{\PYGZpc{} centers the contents in the box}
+    \PYG{k}{\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}tikzpicture\PYG{n+nb}{\PYGZcb{}} \PYG{c}{\PYGZpc{} start a drawing}
+        \PYG{k}{\PYGZbs{}draw} (0,0) circle (1);
+        \PYG{k}{\PYGZbs{}draw}\PYG{n+na}{[fill=black]} (0,0) circle (0.05);
+        \PYG{k}{\PYGZbs{}draw} (2,0) circle (1);
+        \PYG{k}{\PYGZbs{}draw}\PYG{n+na}{[fill=black]} (2,0) circle (0.05);
+        \PYG{k}{\PYGZbs{}draw}\PYG{n+na}{[dashed]} (0,0)\PYGZhy{}\PYGZhy{}(2,0);
+        \PYG{k}{\PYGZbs{}node} at (1, \PYGZhy{}1.3) \PYG{n+nb}{\PYGZob{}}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{s }\PYG{o}{=}\PYG{n+nb}{ }\PYG{l+m}{2}\PYG{n+nb}{r}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{\PYGZcb{}}; \PYG{c}{\PYGZpc{} text captions}
+
+        \PYG{k}{\PYGZbs{}draw} (5,0) circle (1);
+        \PYG{k}{\PYGZbs{}draw}\PYG{n+na}{[fill=black]} (5,0) circle (0.05);
+        \PYG{k}{\PYGZbs{}draw} (6,0) circle (1);
+        \PYG{k}{\PYGZbs{}draw}\PYG{n+na}{[fill=black]} (6,0) circle (0.05);
+        \PYG{k}{\PYGZbs{}draw}\PYG{n+na}{[dashed]} (5,0)\PYGZhy{}\PYGZhy{}(6,0);
+        \PYG{k}{\PYGZbs{}node} at (5.5,\PYGZhy{}1.3) \PYG{n+nb}{\PYGZob{}}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{s }\PYG{o}{=}\PYG{n+nb}{ r}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{\PYGZcb{}};
+
+        \PYG{k}{\PYGZbs{}draw} (9,0) circle (1);
+        \PYG{k}{\PYGZbs{}draw}\PYG{n+na}{[fill=black]} (9,0) circle (0.05);
+        \PYG{k}{\PYGZbs{}node} at (9, \PYGZhy{}1.3) \PYG{n+nb}{\PYGZob{}}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{s }\PYG{o}{=}\PYG{n+nb}{ }\PYG{l+m}{0}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{\PYGZcb{}};
+    \PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}tikzpicture\PYG{n+nb}{\PYGZcb{}} \PYG{c}{\PYGZpc{} close the drawing}
+    \PYG{k}{\PYGZbs{}caption}\PYG{n+nb}{\PYGZob{}}Intersection of equivalent circles over \PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{s }\PYG{o}{=}\PYG{n+nb}{ }\PYG{o}{[}\PYG{l+m}{0}\PYG{n+nb}{, }\PYG{l+m}{2}\PYG{n+nb}{r}\PYG{o}{]}\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{\PYGZcb{}}
+    \PYG{k}{\PYGZbs{}label}\PYG{n+nb}{\PYGZob{}}fig:simple\PYG{n+nb}{\PYGZus{}}domain\PYG{n+nb}{\PYGZcb{}} \PYG{c}{\PYGZpc{} label for referencing}
+\PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}figure\PYG{n+nb}{\PYGZcb{}} \PYG{c}{\PYGZpc{} close the diagram}
+\end{MintedVerbatim}

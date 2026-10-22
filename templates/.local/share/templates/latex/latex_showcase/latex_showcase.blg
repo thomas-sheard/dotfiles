@@ -1,0 +1,5 @@
+[0] Config.pm:328> INFO - This is Biber 2.21
+[0] Config.pm:331> INFO - Logfile is './latex_showcase.blg'
+[68] biber:342> INFO - === Tue Nov 18, 2025, 17:19:19
+[167] Utils.pm:479> ERROR - Cannot find './latex_showcase.bcf'!
+[167] Biber.pm:137> INFO - ERRORS: 1

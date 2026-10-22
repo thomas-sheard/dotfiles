@@ -1,0 +1,149 @@
+\documentclass[12pt]{article}
+
+\linespread{1.2}
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper, margin=2cm]{geometry}
+\usepackage[nodisplayskipstretch]{setspace}
+%\usepackage{indentfirst}
+\setstretch{1.2}
+\setlength{\parindent}{1em}
+
+\everydisplay=\expandafter{\the\everydisplay\setstretch{1}} 
+\setlength{\jot}{8pt}
+
+% page aesthetics %
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[R]{\thepage}
+\setlength{\headheight}{0pt}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0pt}
+\usepackage{float}
+\raggedbottom
+
+% sectioning
+\usepackage{titlesec}
+\usepackage{hyperref}
+
+\titleformat{\section}
+{\normalfont\large\bfseries}
+{\thesection}
+{1em}
+{}
+[]
+
+\titleformat{\subsection}
+{\normalfont\normalsize\bfseries}
+{\thesubsection}
+{1em}
+{}
+[]
+
+\titlespacing*{\section}{0pt}{0.4\baselineskip}{0.4\baselineskip}
+
+\usepackage{amsmath}
+\usepackage{enumitem}
+\usepackage{amssymb}
+\usepackage{pgfplots}
+\usepackage{systeme, etex}
+\allowdisplaybreaks
+
+% code formatting
+\usepackage{fancyvrb}
+\usepackage{fvextra}
+\usepackage{minted}
+%\usemintedstyle{autumn}% all of these are crap >:(
+
+% palette
+\usepackage{xcolor}
+\definecolor{mybg}{HTML}{FFFFFF}
+
+\usepackage{changepage}
+
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
+%\usepackage{figure}
+\usepackage{subcaption}
+
+\newcounter{question}
+\newcounter{subquestion}
+\newcounter{subsubquestion}
+
+\renewcommand{\arraystretch}{1.2}
+
+\newcommand{\newquestion}[1]{
+  \setcounter{subquestion}{0} 
+  \stepcounter{question} 
+  \begin{adjustwidth}{2.5em}{0em}
+    \makebox[0pt][r]{\makebox[1.5em][l]{\thequestion. }}
+    \noindent #1
+  \end{adjustwidth}
+}
+
+\newcommand{\newsubquestion}[1]{
+  \stepcounter{subquestion} 
+  \setcounter{subsubquestion}{0} 
+  \begin{adjustwidth}{4.5em}{0em}
+    \makebox[0pt][r]{\makebox[1.5em][l]{(\alph{subquestion}) }}
+    \noindent #1
+  \end{adjustwidth}
+}
+
+\newcommand{\newsubsubquestion}[1]{
+  \stepcounter{subsubquestion}
+  \begin{adjustwidth}{6.5em}{0em}
+    \makebox[0pt][r]{\makebox[1.5em][l]{(\roman{subsubquestion})}}
+    \noindent #1
+  \end{adjustwidth}
+}
+
+\newcommand{\figscale}{0.8}
+
+\begin{document}
+
+% title page
+
+\thispagestyle{empty}
+
+\lhead{Thomas Sheard}
+\rhead{s4101086}
+
+{\Large\textbf{Title of Report}}
+
+Thomas Sheard (s4101086)
+\vspace{1em}
+\hrule
+\begin{center}
+  \textbf{CRSE0000 Course Name} \par
+  Report subtitle
+\end{center}
+
+\tableofcontents
+
+\clearpage
+
+% science report sections
+
+\section{Introduction}
+
+\section{Method}
+
+\section{Results}
+
+\section{Discussion}
+
+\section{Conclusion}
+
+\clearpage
+
+\section{Appendices}
+
+\appendix
+
+\section{Some appendix}
+\label{appendix:some_appendix}
+
+%\printbibliography
+
+\end{document}

@@ -1,0 +1,11 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{k}{\PYGZbs{}usepackage}\PYG{n+nb}{\PYGZob{}}caption\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}DeclareCaptionFormat}\PYG{n+nb}{\PYGZob{}}custom\PYG{n+nb}{\PYGZcb{}}\PYG{n+nb}{\PYGZob{}}
+  \PYG{k}{\PYGZbs{}textsc}\PYG{n+nb}{\PYGZob{}}\PYGZsh{}1\PYGZsh{}2\PYG{n+nb}{\PYGZcb{}} \PYG{k}{\PYGZbs{}\PYGZbs{}} \PYGZsh{}3
+\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}captionsetup}\PYG{n+nb}{\PYGZob{}}
+  format=custom,
+  font=\PYG{n+nb}{\PYGZob{}}it, stretch=1.2\PYG{n+nb}{\PYGZcb{}},
+  labelsep=none
+\PYG{n+nb}{\PYGZcb{}}
+\end{MintedVerbatim}

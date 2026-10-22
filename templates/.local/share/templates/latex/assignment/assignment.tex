@@ -1,0 +1,93 @@
+\documentclass[12pt]{article}
+
+\linespread{2}
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper, margin=2cm]{geometry}
+\usepackage[nodisplayskipstretch]{setspace}
+%\usepackage{indentfirst}
+\setstretch{2}
+\setlength{\parindent}{0pt}
+\raggedbottom
+
+\everydisplay=\expandafter{\the\everydisplay\setstretch{1}} 
+\setlength{\jot}{8pt}
+\newcommand{\scalefactor}{0.8}
+
+% page aesthetics %
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[R]{}
+\setlength{\headheight}{0pt}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\usepackage{amsmath}
+\usepackage{enumitem}
+\usepackage{amssymb}
+\usepackage{pgfplots}
+\usepackage{systeme, etex}
+\allowdisplaybreaks
+
+\usepackage{fancyvrb}
+\usepackage{fvextra}
+
+\usepackage{changepage}
+
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
+%\usepackage{figure}
+\usepackage{subcaption}
+
+\newcounter{question}
+\newcounter{subquestion}
+\newcounter{subsubquestion}
+
+%\renewcommand{\arraystretch}{1.2}
+%\newenvironment{amatrix}[1]{%
+%  \left(\;\;\begin{array}{@{}*{#1}{r}|r@{}}
+%    }{%
+%  \end{array}\;\;\right)
+%  }
+
+% question commands
+\newcommand{\newquestion}[1]{
+  \setcounter{subquestion}{0} 
+  \stepcounter{question} 
+  \begin{adjustwidth}{2.5em}{0em}
+    \makebox[0pt][r]{\makebox[1.5em][l]{\thequestion. }}
+    \noindent #1
+  \end{adjustwidth}
+}
+
+\newcommand{\newsubquestion}[1]{
+  \stepcounter{subquestion} 
+  \setcounter{subsubquestion}{0} 
+  \begin{adjustwidth}{4.5em}{0em}
+    \makebox[0pt][r]{\makebox[1.5em][l]{(\alph{subquestion}) }}
+    \noindent #1
+  \end{adjustwidth}
+}
+
+\newcommand{\newsubsubquestion}[1]{
+  \stepcounter{subsubquestion}
+  \begin{adjustwidth}{6.5em}{0em}
+    \makebox[0pt][r]{\makebox[1.5em][l]{(\roman{subsubquestion})}}
+    \noindent #1
+  \end{adjustwidth}
+}
+
+\begin{document}
+
+\lhead{Thomas Sheard}
+\rhead{s4101086}
+
+\begin{center}
+  \textbf{CRSE0000 Course Name} \par
+  Assessment
+  \vspace{1em}
+  \hrule
+\end{center}
+
+
+\end{document}

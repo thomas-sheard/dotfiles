@@ -1,0 +1,17 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{k}{\PYGZbs{}newcommand}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}cylinder}\PYG{n+nb}{\PYGZcb{}}[3]\PYG{n+nb}{\PYGZob{}} \PYG{c}{\PYGZpc{} \PYGZbs{}cylinder takes three arguments}
+  \PYG{k}{\PYGZbs{}def}\PYG{k}{\PYGZbs{}radius}\PYG{n+nb}{\PYGZob{}}\PYGZsh{}1\PYG{n+nb}{\PYGZcb{}} \PYG{c}{\PYGZpc{} take radius}
+  \PYG{k}{\PYGZbs{}def}\PYG{k}{\PYGZbs{}height}\PYG{n+nb}{\PYGZob{}}\PYGZsh{}2\PYG{n+nb}{\PYGZcb{}} \PYG{c}{\PYGZpc{} take height}
+  \PYG{k}{\PYGZbs{}def}\PYG{k}{\PYGZbs{}rotation}\PYG{n+nb}{\PYGZob{}}\PYGZsh{}3\PYG{n+nb}{\PYGZcb{}} \PYG{c}{\PYGZpc{} take rotation}
+  \PYG{k}{\PYGZbs{}def}\PYG{k}{\PYGZbs{}eccentricity}\PYG{n+nb}{\PYGZob{}}0.5\PYG{n+nb}{\PYGZcb{}} \PYG{c}{\PYGZpc{} eccentricity of circular}
+
+  \PYG{c}{\PYGZpc{} sides}
+  \PYG{k}{\PYGZbs{}draw}\PYG{n+na}{[rotate=\PYGZbs{}rotation]} (\PYGZhy{}\PYG{k}{\PYGZbs{}radius}, \PYGZhy{}\PYG{k}{\PYGZbs{}height}/2)\PYGZhy{}\PYGZhy{}(\PYGZhy{}\PYG{k}{\PYGZbs{}radius}, \PYG{k}{\PYGZbs{}height}/2);
+  \PYG{k}{\PYGZbs{}draw}\PYG{n+na}{[rotate=\PYGZbs{}rotation]} (\PYG{k}{\PYGZbs{}radius}, \PYGZhy{}\PYG{k}{\PYGZbs{}height}/2)\PYGZhy{}\PYGZhy{}(\PYG{k}{\PYGZbs{}radius}, \PYG{k}{\PYGZbs{}height}/2);
+
+  \PYG{c}{\PYGZpc{} circular faces}
+  \PYG{k}{\PYGZbs{}draw}\PYG{n+na}{[rotate=\PYGZbs{}rotation]} (0,\PYG{k}{\PYGZbs{}height}/2) ellipse [x radius = \PYG{k}{\PYGZbs{}radius}, y radius = \PYG{k}{\PYGZbs{}eccentricity}\PYG{k}{*}\PYG{k}{\PYGZbs{}radius}];
+  \PYG{k}{\PYGZbs{}draw}\PYG{n+na}{[dashed, rotate=\PYGZbs{}rotation]} (\PYG{k}{\PYGZbs{}radius}, \PYGZhy{}\PYG{k}{\PYGZbs{}height}/2) arc (0:180:\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}radius}\PYG{n+nb}{\PYGZcb{}} and \PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}eccentricity}\PYG{k}{*}\PYG{k}{\PYGZbs{}radius}\PYG{n+nb}{\PYGZcb{}});
+  \PYG{k}{\PYGZbs{}draw}\PYG{n+na}{[rotate=\PYGZbs{}rotation]} (\PYGZhy{}\PYG{k}{\PYGZbs{}radius}, \PYGZhy{}\PYG{k}{\PYGZbs{}height}/2) arc (180:360:\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}radius}\PYG{n+nb}{\PYGZcb{}} and \PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}eccentricity}\PYG{k}{*}\PYG{k}{\PYGZbs{}radius}\PYG{n+nb}{\PYGZcb{}});
+\PYG{n+nb}{\PYGZcb{}}
+\end{MintedVerbatim}
