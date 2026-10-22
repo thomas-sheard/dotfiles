@@ -18,9 +18,10 @@ QT_QPA_PLATFORM=wayland
 # localhost 1313
 alias devserver='cd /home/thomas/Desktop/programming/html/website/ && hugo server -D'
 alias btui='bluetuith'
-alias ll='ls -l'
+alias ll='ls -lh --color=auto'
+alias la='ls -a --color=auto'
 alias cdot='cd ~/dotfiles'
-alias bashrc='source ~/.bashrc'
+alias src='source ~/.bashrc'
 
 # generic functions
 
