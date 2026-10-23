@@ -58,21 +58,6 @@ hugonew() {
     fi
 }
 
-#pushdot() {
-#  
-#}
-#
-#pulldot() {
-#
-#}
-
-# R functions
-
-reRun() {
-  Rscript $1
-  zathura Rplots.pdf
-}
-
 # typst functions
 
 tcompile() {
@@ -82,9 +67,9 @@ tcompile() {
   #zathura output.pdf &
 }
 
-typlate() {
-  cp -r ~/Desktop/programming/typst/templates/assignment/* .
-}
+#typlate() {
+#  cp -r ~/Desktop/programming/typst/templates/assignment/* .
+#}
 
 typwrite() {
   # almost always main.typ but generality doesn't hurt
@@ -139,17 +124,18 @@ hxecompile() {
   zathura "$NAME.pdf"
 }
 
-texplate() {
-#  IFS='/' read -ra DIR <<< $(pwd)
-#  pdir="${DIR[-1]}"
-#  cp ~/Desktop/programming/latex/templates/assignment/assignment.tex $pdir.tex
-  cp ~/Desktop/programming/latex/templates/assignment/assignment.tex ./main.tex
-}
+#texplate() {
+##  IFS='/' read -ra DIR <<< $(pwd)
+##  pdir="${DIR[-1]}"
+##  cp ~/Desktop/programming/latex/templates/assignment/assignment.tex $pdir.tex
+#  cp ~/Desktop/programming/latex/templates/assignment/assignment.tex ./main.tex
+#}
 
 # PATH
 
 #export TEXMFHOME=$HOME/.local/texmf
 
 export PATH="$HOME/dotfiles/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
 
 #. "$HOME/.cargo/env"

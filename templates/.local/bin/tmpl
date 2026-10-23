@@ -1,0 +1,42 @@
+#!/usr/bin/env bash
+# Usage: tmpl <kind> [-<letter> | -t NAME | --list | --set-default NAME]
+# Copies a template from $TEMPLATES/<kind>/ into the current directory.
+set -euo pipefail
+
+kind=$1; shift
+dir="${XDG_DATA_HOME:-$HOME/.local/share}/templates/$kind"
+
+# Match a template by full name or by first letter (extension ignored)
+find_template() {
+    local t b
+    for t in "$dir"/*; do
+        b=$(basename "$t"); b=${b%.*}
+        if [[ $b == "$1" || ( ${#1} -eq 1 && ${b:0:1} == "$1" ) ]]; then
+            echo "$t"; return
+        fi
+    done
+    echo "No template matching '$1' in $dir" >&2
+    return 1
+}
+
+case ${1:-} in
+    --list)
+        for t in "$dir"/*; do basename "$t"; done
+        echo "default: $(<"$dir/.default")"
+        exit ;;
+    --set-default)
+        find_template "${2:?template name required}" > /dev/null
+        echo "$2" > "$dir/.default"
+        exit ;;
+    -t) name=${2:?template name required} ;;
+    -?) name=${1#-} ;;
+    "") name=$(<"$dir/.default") ;;
+    *)  echo "Unknown option: $1" >&2; exit 1 ;;
+esac
+
+src=$(find_template "$name")
+if [[ -d $src ]]; then
+    cp -rn "$src"/. .      # directory templates (e.g. with a resources/ folder)
+else
+    cp -n "$src" .
+fi
