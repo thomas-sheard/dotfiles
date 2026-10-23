@@ -36,6 +36,8 @@
 
 // maths helpers
 #import "resources/extensions/maths.typ": *
+#set text(font: "Libertinus Serif")
+#show math.equation: set text(font: ("Libertinus Math", "New Computer Modern Math"))
 
 // question numbering
 #import "resources/extensions/questions.typ": *
