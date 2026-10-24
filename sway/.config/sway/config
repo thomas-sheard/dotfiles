@@ -59,6 +59,8 @@ bar {
 # devices
 
 focus_follows_mouse yes
+# hide cursor (ms)
+seat seat0 hide_cursor 3000 
 
 for_window [shell="xwayland"] title_format "[XWayland] %title"
 
