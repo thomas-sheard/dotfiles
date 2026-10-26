@@ -86,5 +86,5 @@ I wonder what the answer is?
 // bibliography (if using)
 
 #if bib {
-  bibliography("ref.bib", style: "resources/bibstyles/apa.csl")
+  bibliography("resources/ref.bib", style: "resources/bibstyles/apa.csl")
 }
