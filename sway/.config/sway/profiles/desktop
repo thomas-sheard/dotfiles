@@ -46,7 +46,6 @@ bindsym --locked XF86MonBrightnessup exec brightnessctl 5%-
 #bindsym --locked Up
 #bindsym --locked XF86Search playerctl --playerctld play-pause
 
-
 bindsym --locked XF86VoiceCommand exec ~/.config/sway/scripts/mute_toggle.sh
 bindsym XF86DoNotDisturb exec ~/.config/sway/scripts/theme_toggle.sh
 

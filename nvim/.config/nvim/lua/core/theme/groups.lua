@@ -32,6 +32,7 @@ return {
   -- groups.lua
   ["@variable"]           = "text",
   ["@markup.heading"]     = "Title",
+  ["@markup.link"]        = "operator",
   ["@diff.plus"]          = "Added",
   ["@diff.minus"]         = "Removed",
   ["@diff.delta"]         = "Changed",
