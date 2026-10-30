@@ -72,13 +72,13 @@ vim.cmd('autocmd BufEnter * set formatoptions-=cro')
 vim.cmd('autocmd BufEnter * setlocal formatoptions-=cro')
 
 -- syntax highlighting for nested sway config files
-
+-- matches any file without a suffix
 vim.filetype.add({
   extension = {
     sway = 'swayconfig',
   },
   pattern = {
-    ['~/dotfiles/sway/.config/sway/.*'] = 'swayconfig', 
+    ['~/dotfiles/sway/.config/sway/[^.]+$'] = 'swayconfig',
   },
 })
 

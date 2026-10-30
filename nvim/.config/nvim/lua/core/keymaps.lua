@@ -9,7 +9,7 @@ end
 
 -- SYSTEM
 
-keymap('i', '<C-c>', '<Esc>') -- I CAN EXPLAIN
+keymap('i', '<C-c>', '<Esc>') -- i can explain...
 
 keymap('n', '<leader>w', '<C-w>') -- remap window navigation before i remap <C-w>
 keymap('n', '<C-w>', ':w<cr>') -- saving
@@ -34,7 +34,8 @@ keymap('n', '<leader>h>', '<S-K>')
 
 -- MOTIONS
 
-keymap('i', '<C-BS>', '<C-w>') -- control backspace deletes entire word
+keymap('i', '<C-BS>', '<C-w>') -- control backspace deletes entire word behind
+keymap('i', '<C-D>', '<C-o>dw') -- control del deletes entire word ahead
 
 --keymap('i', '<C-Del>', 'de') -- 
 
