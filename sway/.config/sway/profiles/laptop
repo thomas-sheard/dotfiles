@@ -44,7 +44,7 @@ bindsym --locked XF86AudioMicMute exec pactl set-source-mute \@DEFAULT_SOURCE@ t
 bindsym --locked XF86MonBrightnessDown exec brightnessctl set 5%-
 bindsym --locked XF86MonBrightnessUp exec brightnessctl set 5%+
 bindsym --locked XF86Display exec /home/thomas/bin/bash/gammastep_toggle.sh -t 4500
-#bindsym --locked XF86WLAN exec # swaylock?
+bindsym --locked XF86WLAN exec /home/thomas/dotfiles/sway/.config/sway/scripts/theme_toggle.sh
 
 # F9-F12
 

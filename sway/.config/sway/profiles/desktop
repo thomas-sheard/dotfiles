@@ -36,6 +36,7 @@ for_window [app_id="vesktop"] move container to workspace 0
 
 # keybinds (currently for the iqunix)
 # via doesn't actually change the keysym sent to the machine. which is.. annoying. but we can sort of catchall binds for multiple boards by assuming any overlap in keysyms will be sensible, and that more proprietary layouts won't overlap at all
+# and highkey how often am i really switching keyboards on the desktop atm
 
 # these do nothing on the external monitor lol
 bindsym --locked XF86MonBrightnessDown exec brightnessctl 5%-
@@ -47,7 +48,7 @@ bindsym --locked XF86MonBrightnessup exec brightnessctl 5%-
 
 
 bindsym --locked XF86VoiceCommand exec ~/.config/sway/scripts/mute_toggle.sh
-#bindysm --locked XF86DoNotDisturb exec
+bindsym XF86DoNotDisturb exec ~/.config/sway/scripts/theme_toggle.sh
 
 bindsym --locked XF86AudioMute exec pactl set-sink-mute \@DEFAULT_SINK@ toggle
 bindsym --locked XF86AudioLowerVolume exec pactl set-sink-volume \@DEFAULT_SINK@ -5%
