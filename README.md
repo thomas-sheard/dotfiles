@@ -8,7 +8,7 @@ These are then symlinked to their respective locations using [GNU stow](https://
 ## Usage
 
 The repo tracks everything, so pulling between machines includes redundant config files.
-Machine-specific confs 
+Machine-specific confs and more.
 
 
 SDDM configuration should not be added to `configure.sh`, as login managers act before user login.
