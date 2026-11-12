@@ -1,4 +1,4 @@
-This repo tracks my config files across both my laptop (running Arch + Sway) and desktop (running CachyOS + Sway).
+This repo tracks my config files across both my laptop (running Arch + Sway) and desktop (also running Arch + Sway).
 
 Each directory in `~/dotfiles/` contains the entire path from `$HOME` to the relevant configuration files.
 
