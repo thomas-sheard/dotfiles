@@ -1,0 +1,10 @@
+[url "ssh://git@github.com/"]
+    insteadOf = https://github.com/
+[user]
+	email = thomas.sheard26@gmail.com\n
+	name = Thomas Sheard
+	signingkey = /home/thomas/.ssh/id_ed25519.pub
+[gpg]
+	format = ssh
+[commit]
+	gpgsign = true
