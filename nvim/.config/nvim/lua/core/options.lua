@@ -19,9 +19,16 @@ vim.opt.mousescroll = 'ver:10' -- increase scroll event sensitivity
 vim.opt.number = true -- line numbers
 vim.opt.relativenumber = true -- relative line numbers (i like both)
 
-vim.opt.numberwidth = 2 -- 2 char width
-vim.opt.signcolumn = "yes" -- adds padding to line numbers
-vim.opt.statuscolumn = '%{v:relnum?v:relnum:v:lnum}' -- left aligns line numbers
+--vim.opt.numberwidth = 3 -- 2 char width
+--vim.opt.signcolumn = "yes" -- adds padding to line numbers
+
+function _G.StatusCol()
+  local width = #tostring(vim.api.nvim_buf_line_count(0))
+  local n = vim.v.relnum ~= 0 and vim.v.relnum or vim.v.lnum
+  return n .. string.rep(' ', width - #tostring(n))
+end
+
+vim.opt.statuscolumn = '%!v:lua.StatusCol()'
 
 vim.opt.cursorline = true -- highlights current line
 vim.opt.cursorlineopt = 'number' -- only highlights number, not line

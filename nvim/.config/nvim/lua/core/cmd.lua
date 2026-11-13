@@ -10,3 +10,4 @@ vim.api.nvim_create_autocmd("FileType", {
 })
 
 vim.api.nvim_create_user_command("ThemeAudit", require("core.theme.audit").run, {})
+
