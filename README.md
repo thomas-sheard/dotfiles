@@ -27,21 +27,40 @@ You must manually stow it with root privileges. Run `# stow -d ~/dotfiles -t / s
 
 ## Installation notes
 
+# in /etc/pacman.conf 
+uncomment Color for color
+uncomment `[multilib] \ Include` and pacman -Syu for the multilib repo
+
+paru with 
+tmp $ git clone https://aur.archlinux.org/paru.git
+
 pkg:
+nvim
 stow
 waybar
 swaybg
 discord
 spotify
+steam (requires vulkan driver providers; current dgpu is Radeon, igpu is intel)
+tree-sitter
+tree-sitter-cli
+xorg-xwayland
+noto-fonts
+noto-fonts-emoji
+ttf-nerd-fonts-symbols (then run `fc-cache -fv`)
 
-paru with 
-tmp $ git clone https://aur.archlinux.org/paru.git
+nvim error no such file or cmd 'tree-sitter'
+install 
+
+udisks2
+udisks2-docs
+ncdu
 
 aur:
 tofi
 swaycwd
 
-uncomment Color in /etc/pacman.conf for color
+
 set profile and conf (esp font) files in dotfiles/sway
 ignored files !! hum
 
@@ -49,8 +68,6 @@ for ssh keys (incomplete):
 openssh 
 systemctl --user enable --now ssh-agent
 
-nvim error no such file or cmd 'tree-sitter'
-install tree-sitter, tree-sitter-cli
 
 # audio
 ensure installed pipewire pipewire-pulse wireplumber pavucontrol
