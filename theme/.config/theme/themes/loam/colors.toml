@@ -1,0 +1,28 @@
+[meta]
+name = "Loam"
+
+[colors]
+background       = "#2b2622"
+background_dark  = "#211d1a"
+background_alt   = "#363029"
+
+foreground       = "#d0c5b0"
+foreground_muted = "#80745f"
+
+red     = "#c26b5e"
+orange  = "#cf8b5b"
+yellow  = "#d6b571"
+green   = "#9aa874"
+cyan    = "#7fa69a"
+blue    = "#7c99a6"
+purple  = "#a58aa3"
+magenta = "#c0829a"
+
+border    = "#4a423a"
+selection = "#40382f"
+cursor    = "#e2d6bf"
+
+error   = "#c26b5e"
+warning = "#d6b571"
+info    = "#7c99a6"
+success = "#9aa874"

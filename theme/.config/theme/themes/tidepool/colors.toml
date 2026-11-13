@@ -1,0 +1,28 @@
+[meta]
+name = "Tidepool"
+
+[colors]
+background       = "#1e292b"
+background_dark  = "#162022"
+background_alt   = "#28363a"
+
+foreground       = "#bfcdc8"
+foreground_muted = "#62777a"
+
+red     = "#b86a64"
+orange  = "#c48a62"
+yellow  = "#cdb677"
+green   = "#8aab84"
+cyan    = "#6fb0a6"
+blue    = "#6c97b0"
+purple  = "#9a8fb0"
+magenta = "#b98aa0"
+
+border    = "#38494c"
+selection = "#2f4145"
+cursor    = "#d3e0db"
+
+error   = "#b86a64"
+warning = "#cdb677"
+info    = "#6c97b0"
+success = "#8aab84"
