@@ -24,3 +24,43 @@ You must manually stow it with root privileges. Run `# stow -d ~/dotfiles -t / s
     - similar again for lists: automatically place another list element at the same level of indentation, but erase it and return to beginning of line if enter is pressed again
     - \a, \x etc expand to $x$, also \\- expand to `$-|$`
     - ;a, ;b etc expand to alpha, beta, ;A -> Alpha etc
+
+## Installation notes
+
+pkg:
+stow
+waybar
+swaybg
+discord
+spotify
+
+paru with 
+tmp $ git clone https://aur.archlinux.org/paru.git
+
+aur:
+tofi
+swaycwd
+
+uncomment Color in /etc/pacman.conf for color
+set profile and conf (esp font) files in dotfiles/sway
+ignored files !! hum
+
+for ssh keys (incomplete):
+openssh 
+systemctl --user enable --now ssh-agent
+
+nvim error no such file or cmd 'tree-sitter'
+install tree-sitter, tree-sitter-cli
+
+# audio
+ensure installed pipewire pipewire-pulse wireplumber pavucontrol
+systemctl --user enable pipewire.service pipewire-pulse.service wireplumber.service
+reboot
+
+# bluetooth
+
+install bluez, bluez-utils
+sudo systemctl enable --now blueooth
+systemctl enable bluetooth.service 
+(no --user)!
+
