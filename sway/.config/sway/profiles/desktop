@@ -44,7 +44,6 @@ for_window [app_id="discord"] move container to workspace 0
 bindsym --locked XF86MonBrightnessDown exec brightnessctl 5%-
 bindsym --locked XF86MonBrightnessup exec brightnessctl 5%-
 
-# ???? this is for F3 and F4 modifier function. a bit strange but. not sure how to fix. don't need them for now though
 # F3 is Control+Up (?)
 bindsym --locked Control+Up exec thunar
 #bindsym --locked XF86Search playerctl --playerctld play-pause
