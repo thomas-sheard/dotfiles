@@ -34,7 +34,7 @@ uncomment `[multilib] \ Include` and pacman -Syu for the multilib repo
 paru with 
 tmp $ git clone https://aur.archlinux.org/paru.git
 
-pkg:
+## pkg:
 nvim
 stow
 waybar
@@ -48,24 +48,28 @@ xorg-xwayland
 noto-fonts
 noto-fonts-emoji
 ttf-nerd-fonts-symbols (then run `fc-cache -fv`)
-
-nvim error no such file or cmd 'tree-sitter'
-install 
-
+grim
+slurp
+wl-clipboard
+yazi
+ncdu
+poppler
 udisks2
 udisks2-docs
-ncdu
+openssh 
+pipewire
+pipewire-pulse
+wireplumber
+pavucontrol
+bluez bluez-utils 
 
-aur:
+## aur:
 tofi
 swaycwd
 
-
 set profile and conf (esp font) files in dotfiles/sway
-ignored files !! hum
 
 for ssh keys (incomplete):
-openssh 
 systemctl --user enable --now ssh-agent
 
 
