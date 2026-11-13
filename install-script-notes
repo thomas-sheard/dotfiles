@@ -1,0 +1,30 @@
+pkg:
+stow
+waybar
+swaybg
+discord
+
+paru with 
+tmp $ git clone https://aur.archlinux.org/paru.git
+
+aur:
+tofi
+
+uncomment Color in /etc/pacman.conf for color
+set profile and conf (esp font) files in dotfiles/sway
+ignored files !! hum
+
+
+nvim error no such file or cmd 'tree-sitter'
+
+
+# audio
+ensure installed pipewire pipewire-pulse wireplumber pavucontrol
+systemctl --user enable pipewire.service pipewire-pulse.service wireplumber.service
+reboot
+
+# bluetooth
+
+
+
+
