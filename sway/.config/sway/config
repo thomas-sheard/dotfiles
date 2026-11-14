@@ -180,7 +180,9 @@ bindsym $mod+Control+Tab floating disable, move container to workspace 0
 
 bindsym $mod+grave workspace back_and_forth
 
+# changes depending on whether xwayland is running ... catchall
 for_window [app_id="spotify"] move container to workspace 0
+for_window [class="spotify"] move container to workspace 0
 
 # i've found it's useful to have at least one named (not numbered) 'void' workspace that can just have crap sent to it
 # it gives you another, non-hierarchichal way to index workspaces
@@ -195,16 +197,11 @@ bindsym $mod+Shift+$right resize shrink width 10px
 bindsym $mod+Shift+$down resize grow height 10px
 bindsym $mod+Shift+$up resize shrink height 10px
 
-# screenshot + screenshot to clipboard
-# FIXME: currently saves to ~ instead of ~/Pictures, which is annoying
+# screenshot (saves to ~/Pictures) / clipboard / save-as dialog
+bindsym Print exec flock -n $XDG_RUNTIME_DIR/screenshot.lock sh -c 'mkdir -p ~/Pictures && grim -g "$(slurp)" ~/Pictures/screenshot_$(date +%Y%m%d_%H%M%S).png'
 
-bindsym Print exec grim -g "$(slurp)" 
-bindsym Control+Print exec grim -g "$(slurp -d)" - | wl-copy
+bindsym Control+Print exec flock -n $XDG_RUNTIME_DIR/screenshot.lock sh -c 'grim -g "$(slurp -d)" - | wl-copy'
 
-for_window [app_id="zenity"] floating enable
-
-bindsym $mod+Print exec bash -c 'TEMP_FILE=$(mktemp /tmp/screenshot_XXXXXX.png); grim -g "$(slurp)" "$TEMP_FILE" && TARGET=$(zenity --file-selection --save --confirm-overwrite --filename="$HOME/screenshot_$(date +%Y%m%d_%H%M%S).png"); if [ ! -z "$TARGET" ]; then mv "$TEMP_FILE" "$TARGET"; else rm "$TEMP_FILE"; fi'
-
-#bindsym $mod+Print exec bash -c 'TARGET=$(zenity --file-selection --save --confirm-overwrite --filename="$HOME/screenshot_$(date +%Y%m%d_%H%M%S).png"); [ ! -z "$TARGET" ] && grim -g "$(slurp)" "$TARGET"'
+bindsym $mod+Print exec flock -n $XDG_RUNTIME_DIR/screenshot.lock bash -c 'TEMP_FILE=$(mktemp /tmp/screenshot_XXXXXX.png); grim -g "$(slurp)" "$TEMP_FILE" && TARGET=$(zenity --file-selection --save --confirm-overwrite --filename="$HOME/Pictures/screenshot_$(date +%Y%m%d_%H%M%S).png"); if [ ! -z "$TARGET" ]; then mv "$TEMP_FILE" "$TARGET"; else rm "$TEMP_FILE"; fi'
 
 include /etc/sway/config.d/*
